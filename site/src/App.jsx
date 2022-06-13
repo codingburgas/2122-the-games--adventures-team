@@ -1,0 +1,42 @@
+import TextBox from "./Components/TextBox";
+import textBoxData from "./data/textBoxData";
+import Character from "./Components/Character";
+import Person from "./Components/Person";
+import characterData from "./data/characterData";
+
+function App() {
+  return (
+    <>
+      {/* the poster */}
+      <div className="poster">
+        <button className="download__button">DOWNLOAD</button>
+      </div>
+
+      {/* The text box */}
+      <div className="textbox--container">
+        {textBoxData.map((item) => {
+          return <TextBox title={item.title} content={item.content} />;
+        })}
+      </div>
+
+      {/* The characters */}
+      <div className="character--container">
+        <div className="characters__number"></div>
+
+        <h2 className="characters__title">Characters</h2>
+        <div className="characters__decoration"></div>
+        {characterData.map((item) => {
+          return (
+            <Character
+              name={item.name}
+              description={item.description}
+              drawing={item.drawing}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+export default App;
