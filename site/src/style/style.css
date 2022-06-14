@@ -118,7 +118,7 @@ body {
   margin: var(--spacer-md) 64px;
   background-color: #bdb7b2;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   text-align: left;
   gap: 20px;
@@ -130,7 +130,7 @@ body {
 }
 
 .ability__picture {
-  border: 3px solid yellow;
+  border: 2px solid yellow;
   width: 64px;
   height: 64px;
 }
@@ -153,4 +153,17 @@ body {
 
 .ability__description__type {
   margin: calc(var(--spacer) - 5px) auto;
+}
+
+/* Gameplay */
+.gameplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameplay__video {
+  width: 90%;
+  margin: auto 20px;
 }

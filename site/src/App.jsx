@@ -43,13 +43,14 @@ function App() {
           title="Gameplay"
           content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cum dolor numquam consequuntur eos possimus atque dicta optio est enim?"
         />
-        <video controls></video>
+        <video controls className="gameplay__video"></video>
       </div>
       <div className="card--container">
         {personData.map((item) => {
           return <Person item={item} />;
         })}
       </div>
+
       <div className="down--download--button">
         <button className="poster__download__button">DOWNLOAD</button>
       </div>
