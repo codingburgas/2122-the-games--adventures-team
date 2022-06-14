@@ -6,9 +6,17 @@ export default function Character(props) {
   return (
     <>
       <div className="character--container">
-        <img src={props.item.drawing} alt="" className="characters__drawing" />
-        <h2 className="character__name">{props.item.name}</h2>
-        <p className="characters__content">{props.item.description}</p>
+        <div className="character__drawing__description__name">
+          <img
+            src={require("../img/test/char.jpg")}
+            alt=""
+            className="characters__drawing"
+          />
+          <div className="character__name__discription">
+            <h2 className="character__name">{props.item.name}</h2>
+            <p className="characters__content">{props.item.description}</p>
+          </div>
+        </div>
 
         {/* ability */}
         <div className="characters__ability__container">

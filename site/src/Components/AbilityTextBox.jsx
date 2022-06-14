@@ -2,10 +2,21 @@ export default function AbilityTextBox(props) {
   return (
     <>
       <div className="ability--box">
-        <h3 className="ability__type">Type: {props.type}</h3>
+        <img
+          src={props.decoration}
+          alt=""
+          className="ability__decoration__right"
+        />
+        <img
+          src={props.decoration}
+          alt=""
+          className="ability__decoration__left"
+        />
         <img src={props.picture} className="ability__picture" />
-        <img src={props.decoration} alt="" className="ability__decoration" />
-        <p className="ability__desctiption">{props.description}</p>
+        <div className="ability__description__type">
+          <h3 className="ability__type">Type: {props.type}</h3>
+          <p className="ability__desctiption">{props.description}</p>
+        </div>
       </div>
     </>
   );

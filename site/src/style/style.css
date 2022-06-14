@@ -96,3 +96,61 @@ body {
 .character--title--number {
   margin: auto 20px;
 }
+
+.characters__drawing {
+  height: 10.5em;
+  margin: auto 10px;
+}
+
+.character__drawing__description__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacer-lg);
+}
+
+.character__name {
+  margin: var(--spacer) auto;
+}
+
+/* abilities */
+.ability--box {
+  margin: var(--spacer-md) 64px;
+  background-color: #bdb7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  position: relative;
+}
+
+.ability__type {
+  margin-bottom: var(--spacer);
+}
+
+.ability__picture {
+  border: 3px solid yellow;
+  width: 64px;
+  height: 64px;
+}
+
+.ability__decoration__right,
+.ability__decoration__left {
+  border: 2px solid red;
+  position: absolute;
+  height: 100%;
+  width: 64px;
+}
+
+.ability__decoration__left {
+  left: -64px;
+}
+
+.ability__decoration__right {
+  right: -64px;
+}
+
+.ability__description__type {
+  margin: calc(var(--spacer) - 5px) auto;
+}
