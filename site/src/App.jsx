@@ -3,6 +3,7 @@ import textBoxData from "./data/textBoxData";
 import Character from "./Components/Character";
 import Person from "./Components/Person";
 import characterData from "./data/characterData";
+import personData from "./data/personData";
 
 function App() {
   return (
@@ -26,15 +27,24 @@ function App() {
         <h2 className="characters__title">Characters</h2>
         <div className="characters__decoration"></div>
         {characterData.map((item) => {
-          return (
-            <Character
-              name={item.name}
-              description={item.description}
-              drawing={item.drawing}
-            />
-          );
+          return <Character item={item} />;
         })}
       </div>
+
+      <div className="gameplay">
+        <TextBox
+          title="Gameplay"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cum dolor numquam consequuntur eos possimus atque dicta optio est enim?"
+        />
+        <video controls></video>
+      </div>
+      <div className="card--container">
+        {personData.map((item) => {
+          return <Person item={item} />;
+        })}
+      </div>
+
+      <button className="download__button">DOWNLOAD</button>
     </>
   );
 }
