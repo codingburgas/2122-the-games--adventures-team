@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff: "Arial";
+
+  --fw-n: 300;
+  --fw-m: 600;
+  --fw-b: 900;
+
+  --fs-2: 5rem;
+  --fs-3: 2rem;
+  --fs-p: 1em;
+
+  --primary-color: #886a83;
+  --secondary-color: #af858e;
+  --accent-color: #607661;
+
+  --spacer: 1rem;
+  --spacer-md: calc(var(--spacer) * 2);
+  --spacer-lg: calc(var(--spacer) * 3);
+}
+
+body {
+  font-family: var(--ff);
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+/* poster styling */
+.poster {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster__download__button {
+  width: 250px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 10px;
+  font-weight: var(--fw-b);
+  letter-spacing: 3px;
+  --fs-3: 1.5em;
+  font-size: var(--fs-3);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.poster__download__button:hover {
+  --accent-color: #495549;
+  background-color: var(--accent-color);
+  letter-spacing: 5px;
+  transform: scale(1.05);
+}
+
+.poster__download__button:active {
+  transform: scale(0.97);
+}
+
+.down--download--button {
+  text-align: center;
+}
+
+/* textbox styling */
+.textbox,
+.character--container {
+  margin: var(--spacer-md) 20px;
+  text-align: center;
+  font-size: var(--fs-p);
+}
+.textbox__title,
+.characters__title {
+  font-size: var(--fs-3);
+}
+
+.textbox__title__image__container,
+.character--title--number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: var(--spacer) auto;
+}
+
+.textbox__number,
+.character__number {
+  width: 40px;
+  height: 40px;
+}
+
+/* character */
+.character--title--number {
+  margin: auto 20px;
+}

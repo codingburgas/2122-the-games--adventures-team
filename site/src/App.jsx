@@ -4,13 +4,14 @@ import Character from "./Components/Character";
 import Person from "./Components/Person";
 import characterData from "./data/characterData";
 import personData from "./data/personData";
+import "./style/style.css";
 
 function App() {
   return (
     <>
       {/* the poster */}
       <div className="poster">
-        <button className="download__button">DOWNLOAD</button>
+        <button className="poster__download__button">DOWNLOAD</button>
       </div>
 
       {/* The text box */}
@@ -21,10 +22,16 @@ function App() {
       </div>
 
       {/* The characters */}
-      <div className="character--container">
-        <div className="characters__number"></div>
+      <div className="characters--container">
+        <div className="character--title--number">
+          <img
+            src={require("./img/test/num.png")}
+            className="character__number"
+          />
 
-        <h2 className="characters__title">Characters</h2>
+          <h2 className="characters__title">Characters</h2>
+        </div>
+
         <div className="characters__decoration"></div>
         {characterData.map((item) => {
           return <Character item={item} />;
@@ -43,8 +50,9 @@ function App() {
           return <Person item={item} />;
         })}
       </div>
-
-      <button className="download__button">DOWNLOAD</button>
+      <div className="down--download--button">
+        <button className="poster__download__button">DOWNLOAD</button>
+      </div>
     </>
   );
 }
