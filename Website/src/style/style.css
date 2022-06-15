@@ -123,6 +123,7 @@ body {
   text-align: left;
   gap: 20px;
   position: relative;
+  border: 2px solid black;
 }
 
 .ability__type {
@@ -130,14 +131,14 @@ body {
 }
 
 .ability__picture {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   width: 64px;
   height: 64px;
 }
 
 .ability__decoration__right,
 .ability__decoration__left {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   position: absolute;
   height: 100%;
   width: 64px;
@@ -176,6 +177,7 @@ body {
   margin: var(--spacer-lg) 20px;
   border-bottom-right-radius: 45px;
   border-top-left-radius: 45px;
+  border: 2px solid black;
 }
 
 .card__image {
