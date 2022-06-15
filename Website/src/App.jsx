@@ -54,6 +54,16 @@ function App() {
       <div className="down--download--button">
         <button className="poster__download__button">DOWNLOAD</button>
       </div>
+
+      {/* footer */}
+      <footer className="footer">
+        <a
+          href="https://github.com/codingburgas/2122-the-games--adventures-team"
+          className="footer__link"
+        >
+          GitHub
+        </a>
+      </footer>
     </>
   );
 }

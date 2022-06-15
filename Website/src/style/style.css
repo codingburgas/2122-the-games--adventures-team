@@ -202,3 +202,30 @@ body {
 .card--container {
   display: flex;
 }
+
+/* footer */
+.footer {
+  background-color: rgb(49, 49, 49);
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin-top: var(--spacer-lg);
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: rgb(236, 236, 236);
+  font-size: 1.5rem;
+  margin: auto var(--spacer-md);
+}
+
+.footer__link:hover {
+  color: rgb(204, 204, 204);
+}
+
+.footer__link:active {
+  transform: scale(0.97);
+}
