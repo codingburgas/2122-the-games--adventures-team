@@ -1,7 +1,7 @@
 import TextBox from "./Components/TextBox";
 import textBoxData from "./data/textBoxData";
 import Character from "./Components/Character";
-import Person from "./Components/Person";
+import Person from "./Components/Card";
 import characterData from "./data/characterData";
 import personData from "./data/personData";
 import "./style/style.css";
