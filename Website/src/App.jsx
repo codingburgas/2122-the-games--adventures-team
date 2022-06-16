@@ -5,8 +5,36 @@ import Person from "./Components/Card";
 import characterData from "./data/characterData";
 import personData from "./data/personData";
 import "./style/style.css";
+import React from "react";
 
 function App() {
+  let currentScrollPosition = 0;
+  let positionUpdate = 250;
+
+  const box = React.useRef(null);
+  const scrollContainer = React.useRef(null);
+
+  function scrollRight() {
+    let maxPosition =
+      box.current.clientWidth - scrollContainer.current.clientWidth;
+
+    console.log(maxPosition);
+
+    if (currentScrollPosition < -maxPosition) {
+      currentScrollPosition += positionUpdate;
+    }
+
+    scrollContainer.current.style.left = `-${currentScrollPosition}px`;
+  }
+
+  function scrollLeft() {
+    if (currentScrollPosition > 0) {
+      currentScrollPosition -= positionUpdate;
+    }
+
+    scrollContainer.current.style.left = `-${currentScrollPosition}px`;
+  }
+
   return (
     <>
       {/* the poster */}
@@ -45,10 +73,14 @@ function App() {
         />
         <video controls className="gameplay__video"></video>
       </div>
-      <div className="card--container">
-        {personData.map((item) => {
-          return <Person item={item} />;
-        })}
+      <div className="card--container" ref={box}>
+        <div className="scroll__container" ref={scrollContainer}>
+          {personData.map((item) => {
+            return <Person item={item} />;
+          })}
+        </div>
+        <div className="card__button__left" onClick={scrollLeft}></div>
+        <div className="card__button__right" onClick={scrollRight}></div>
       </div>
 
       <div className="down--download--button">

@@ -201,6 +201,35 @@ body {
 
 .card--container {
   display: flex;
+  overflow-x: visible;
+  align-items: center;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.scroll__container {
+  display: flex;
+  position: relative;
+  transition: linear 0.3s;
+  left: 0;
+}
+
+.card__button__left {
+  background-color: #607661;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+}
+
+.card__button__right {
+  background-color: #607661;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  right: 0;
 }
 
 /* footer */
