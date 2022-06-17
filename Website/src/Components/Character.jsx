@@ -8,7 +8,7 @@ export default function Character(props) {
       <div className="character--container">
         <div className="character__drawing__description__name">
           <img
-            src={require("../img/test/char.jpg")}
+            src={require("../img/tay3.png")}
             alt=""
             className="characters__drawing"
           />

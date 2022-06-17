@@ -15,9 +15,11 @@
   --fs-3: 2rem;
   --fs-p: 1em;
 
-  --primary-color: #886a83;
-  --secondary-color: #af858e;
+  --primary-color: #1f272d;
+  --secondary-color: #080a0b;
   --accent-color: #607661;
+
+  --fs-cl: #eff2f4;
 
   --spacer: 1rem;
   --spacer-md: calc(var(--spacer) * 2);
@@ -72,10 +74,12 @@ body {
   margin: var(--spacer-md) 20px;
   text-align: center;
   font-size: var(--fs-p);
+  color: var(--fs-cl);
 }
 .textbox__title,
 .characters__title {
   font-size: var(--fs-3);
+  color: var(--fs-cl);
 }
 
 .textbox__title__image__container,
@@ -115,15 +119,16 @@ body {
 
 /* abilities */
 .ability--box {
-  margin: var(--spacer-md) 64px;
-  background-color: #bdb7b2;
+  margin: var(--spacer-md) 5px;
+  background-color: #dfe5e9;
   display: flex;
   justify-content: left;
   align-items: center;
   text-align: left;
   gap: 20px;
-  position: relative;
   border: 2px solid black;
+  border-radius: 28px;
+  color: #080a0b;
 }
 
 .ability__type {
@@ -158,10 +163,7 @@ body {
 
 /* Gameplay */
 .gameplay {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .gameplay__video {
@@ -173,7 +175,7 @@ body {
 .card {
   width: 250px;
   height: 300px;
-  background-color: #9c9289;
+  background-color: #add8e6;
   margin: var(--spacer-lg) 20px;
   border-bottom-right-radius: 45px;
   border-top-left-radius: 45px;
@@ -217,29 +219,43 @@ body {
   left: 0;
 }
 
+.card__button__right,
 .card__button__left {
-  background-color: #607661;
-  width: 64px;
-  height: 64px;
-  position: absolute;
-}
-
-.card__button__right {
-  background-color: #607661;
+  background-image: url("../img/aboutUsAssets/right_arrow.png");
   width: 64px;
   height: 64px;
   position: absolute;
   right: 0;
+  background-repeat: no-repeat;
+  background-size: 64px;
+  background-position: center;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.card__button__left {
+  left: 0;
+  background-image: url("../img/aboutUsAssets/left_arrow.png");
+}
+
+.card__button__left:hover,
+.card__button__right:hover {
+  transform: scale(1.05);
+}
+
+.card__button__left:active,
+.card__button__right:active {
+  transform: scale(0.97);
 }
 
 /* footer */
 .footer {
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(155, 145, 145);
   position: relative;
   width: 100%;
   bottom: 0;
   margin-top: var(--spacer-lg);
-  height: 100px;
+  height: 77px;
   display: flex;
   align-items: center;
 }

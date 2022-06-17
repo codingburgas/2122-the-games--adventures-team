@@ -18,8 +18,6 @@ function App() {
     let maxPosition =
       box.current.clientWidth - scrollContainer.current.clientWidth;
 
-    console.log(maxPosition);
-
     if (currentScrollPosition < -maxPosition) {
       currentScrollPosition += positionUpdate;
     }
@@ -73,6 +71,7 @@ function App() {
         />
         <video controls className="gameplay__video"></video>
       </div>
+
       <div className="card--container" ref={box}>
         <div className="scroll__container" ref={scrollContainer}>
           {personData.map((item) => {
