@@ -33,6 +33,12 @@ function App() {
     scrollContainer.current.style.left = `-${currentScrollPosition}px`;
   }
 
+  // Cheching if the window has gone fullscrean
+  window.addEventListener("resize", () => {
+    currentScrollPosition = 0;
+    scrollContainer.current.style.left = `0px`;
+  });
+
   return (
     <>
       {/* the poster */}
