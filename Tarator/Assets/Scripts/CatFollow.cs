@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class CatFollow : MonoBehaviour
 {
-    public Transform player;
-    public float moveSpeed = 5f;
-    private Rigidbody2D rb;
-    private Vector2 movement;
+   //Object you want to follow
+    public Transform target;
+    
+    //Set to z -10
+    public Vector3 offset;
+    
+    //How much delay on the follow
+    [Range(1, 10)]
+    public float smoothing;
 
-    // Start is called before the first frame update
-    void Start(){
-        rb = this.GetComponent<Rigidbody2D>();
+    private void FixedUpdate()
+    {
+        Follow();
     }
 
-    // Update is called once per frame
-    void Update(){
-        Vector3 direction = player.position - transform.position;
-
-        direction.Normalize();
-        movement = direction;
-    }
-    private void FixedUpdate() {
-        moveCharacter(movement);
-    }
-    void moveCharacter(Vector2 direction){
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    void Follow()
+    {
+        Vector3 targetPosition = target.position + offset;
+        Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothing * Time.fixedDeltaTime);
+        transform.position = smoothPosition;
     }
 }

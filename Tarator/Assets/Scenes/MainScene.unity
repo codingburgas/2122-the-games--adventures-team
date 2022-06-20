@@ -456,11 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 663649707}
-  moveSpeed: 0.75
-  health: 100
-  outrange: 1
-  enemyrange: 0.5
-  enemies: {fileID: 0}
+  offset: {x: -0.1, y: -0.2, z: 0}
+  smoothing: 3
 --- !u!61 &1158007565
 BoxCollider2D:
   m_ObjectHideFlags: 0
