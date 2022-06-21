@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6702277050098862132}
   - component: {fileID: 6702277050098862135}
-  - component: {fileID: 2858294246148244796}
+  - component: {fileID: 8248212985855318386}
   - component: {fileID: 1162770548776044929}
   - component: {fileID: 7337501681455309550}
   - component: {fileID: 4215857782183903730}
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2858294246148244796
+--- !u!114 &8248212985855318386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

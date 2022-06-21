@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatFollow : MonoBehaviour
+public class TankEnemy : MonoBehaviour
 {
-   public float speed;
+    public float speed;
     public float StoppintDistance;
 
     private Transform target;
