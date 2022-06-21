@@ -49,17 +49,20 @@ function App() {
       {/* The text box */}
       <div className="textbox--container">
         {textBoxData.map((item) => {
-          return <TextBox title={item.title} content={item.content} />;
+          return (
+            <TextBox
+              title={item.title}
+              content={item.content}
+              number={item.number}
+            />
+          );
         })}
       </div>
 
       {/* The characters */}
       <div className="characters--container">
         <div className="character--title--number">
-          <img
-            src={require("./img/test/num.png")}
-            className="character__number"
-          />
+          <div className="textbox__number">3</div>
 
           <h2 className="characters__title">Characters</h2>
         </div>
@@ -74,6 +77,7 @@ function App() {
         <TextBox
           title="Gameplay"
           content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cum dolor numquam consequuntur eos possimus atque dicta optio est enim?"
+          number={4}
         />
         <video controls className="gameplay__video"></video>
       </div>
