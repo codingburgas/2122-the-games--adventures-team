@@ -1,6 +1,7 @@
 import AbilityTextBox from "./AbilityTextBox";
 import abilityDataMC from "../data/abilityDataMC";
 import abilityDataSC from "../data/abilityDataSC";
+import healIcon from "../img/heal.png"
 
 export default function Character(props) {
   return (
