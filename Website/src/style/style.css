@@ -120,7 +120,7 @@ body {
 /* abilities */
 .ability--box {
   margin: var(--spacer-md) 5px;
-  background-color: #dfe5e9;
+  background-color: #000000;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -130,6 +130,7 @@ body {
   border-radius: 28px;
   color: #080a0b;
 }
+
 
 .ability__type {
   margin-bottom: var(--spacer);
