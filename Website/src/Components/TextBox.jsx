@@ -2,7 +2,6 @@ export default function TextBox(props) {
   return (
     <>
       <div className="textbox">
-        <div className="textbox__decoration"></div>
         <div className="textbox__title__image__container">
           <div className="textbox__number">{props.number}</div>
           <h2 className="textbox__title">{props.title}</h2>
