@@ -1,13 +1,15 @@
+import healIcon from "../img/heal.png"
+
 let abilityDataMC = [
   {
     type: "Atack",
-    picture: "#",
+    picture: healIcon,
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit Perferendis velit totam error quis quo. Dolores.",
   },
   {
     type: "MH regen",
-    picture: "#",
+    picture: healIcon,
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit Perferendis velit totam error quis quo. Dolores.",
   },

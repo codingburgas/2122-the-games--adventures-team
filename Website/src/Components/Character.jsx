@@ -1,6 +1,7 @@
 import AbilityTextBox from "./AbilityTextBox";
 import abilityDataMC from "../data/abilityDataMC";
 import abilityDataSC from "../data/abilityDataSC";
+import healIcon from "../img/heal.png"
 
 export default function Character(props) {
   return (
@@ -24,11 +25,11 @@ export default function Character(props) {
           {props.item.name === "Taylor" &&
             abilityDataMC.map((item) => {
               return (
-                <AbilityTextBox
-                  type={item.type}
-                  description={item.description}
-                  picture={item.picture}
-                />
+                  <AbilityTextBox
+                    type={item.type}
+                    description={item.description}
+                    picture={item.picture}
+                  />
               );
             })}
 
