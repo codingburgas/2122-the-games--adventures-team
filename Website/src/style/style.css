@@ -147,6 +147,7 @@ body {
   /* border: 2px solid yellow; */
   width: 64px;
   height: 64px;
+  margin-left: 15px;
 }
 
 .ability__decoration__right,
@@ -281,4 +282,77 @@ body {
 
 .footer__link:active {
   transform: scale(0.97);
+}
+
+.card--container::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  background-color: #D9D9D9;
+  top: 20px;
+}
+
+.card--container::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  background-color: #D9D9D9;
+  bottom: 20px;
+}
+
+.card--container{
+  position: relative;
+}
+
+
+@media only screen and (min-width: 40em) {
+  .textbox--container{
+    display:  flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textbox{
+    width: 70ch;
+  }
+
+  .character--title--number{
+    display: flex;
+    justify-content: center;
+    margin: var(--spacer-lg) auto;
+  }
+  .characters__ability__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  }
+  .ability--box{
+    width: 30em;
+  }
+
+  .character--container{
+    display: flex;
+    margin: var(--spacer-lg);
+   gap: 20px;
+  }
+
+  .character__name__discription{
+    width: 40ch;
+  }
+
+  .character--container{
+    justify-content: center;
+  }
+
+  .gameplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }

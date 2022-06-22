@@ -24,11 +24,11 @@ export default function Character(props) {
           {props.item.name === "Taylor" &&
             abilityDataMC.map((item) => {
               return (
-                <AbilityTextBox
-                  type={item.type}
-                  description={item.description}
-                  picture={item.picture}
-                />
+                  <AbilityTextBox
+                    type={item.type}
+                    description={item.description}
+                    picture={item.picture}
+                  />
               );
             })}
 
