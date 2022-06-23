@@ -19,32 +19,31 @@ public class Item : MonoBehaviour
     /// object (2D physics only)
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Check if other's type is "Player"
         if (other.gameObject.tag == "Player")
         {
             switch(itemType)
             {
+                // Place to Melee Slot
                 case "staff":
                 Instantiate(item, inventory.slots[0].transform,false);
-
-                if(item.transform == inventory.slots[0].transform)
-                {
-                    Debug.Log("its here");
-                }
                 break;
 
+                // Place to Ranged Slot
                 case "bow":
                 Instantiate(item, inventory.slots[1].transform,false);
                 break;
 
+                // Place to Special Weapon Slot
                 case "vacuum":
                 Instantiate(item, inventory.slots[2].transform,false);
                 break;
             }
 
+            // Remove unneeded object
             Destroy(gameObject);
         }
 
-        
     }
             
 }

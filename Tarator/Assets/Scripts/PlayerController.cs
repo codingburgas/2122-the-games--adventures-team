@@ -5,21 +5,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    // Variables for movement
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
+     Vector2 movementInput;
     public ContactFilter2D movementFilter;
 
+    // Variables for health
     public int maxHealth = 100;
     public int currentHealth;
-
     public HealthBar healthBar;
 
-    Vector2 movementInput;
+   // Variables for flipX
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>(); 
 
+    // Start is called on the frame when a script is enabled just before
+    // any of the Update methods is called the first time.
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,16 +35,20 @@ public class PlayerController : MonoBehaviour
 
     private void Update() 
     {
+        // Checks if space key is pressed
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("kokus");
-            TakeDamage();
+            TakeDamage(20);
         }
     }
 
-    void TakeDamage()
+    // Lower health depending on damage
+    void TakeDamage(int damage)
 	{
-        currentHealth =- 20;
+        currentHealth =- damage;
+
+        //Set slider's value to currentHealth
         healthBar.SetHealth(currentHealth);
 	}
 
