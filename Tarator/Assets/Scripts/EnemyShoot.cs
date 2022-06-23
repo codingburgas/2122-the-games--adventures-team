@@ -19,7 +19,7 @@ public class EnemyShoot : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         if(transform.position.x == target.x && transform.position.y == target.y)
         {

@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
-    //public Sprite up_Sprite, down_Sprite, left_Sprite, right_Sprite, normal_Sprite;
 
 
     Vector2 movementInput;
@@ -70,26 +69,5 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
-
-        /*if (Input.GetKeyDown(KeyCode.Up))
-        {
-            GetComponent<SpriteRenderer>().sprite = up_Sprite;
-        }
-        /*else if (Input.GetKeyDown(KeyCode.Right))
-        {
-            GetComponent<SpriteRenderer>().sprite = up_Sprite;
-        }
-        else if (Input.GetKeyDown(KeyCode.Down))
-        {
-            GetComponent<SpriteRenderer>().sprite = up_Sprite;
-        }
-        else if (Input.GetKeyDown(KeyCode.Left))
-        {
-            GetComponent<SpriteRenderer>().sprite = up_Sprite;
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().sprite = normal_Sprite;
-        }*/
     }
 }
