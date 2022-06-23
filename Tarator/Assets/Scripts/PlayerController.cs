@@ -48,6 +48,12 @@ public class PlayerController : MonoBehaviour
 	{
         currentHealth -= damage;
 
+        // Check if health is lower than 0
+        if(currentHealth <= 0)
+        {
+            currentHealth = 1;
+        }
+
         //Set slider's value to currentHealth
         healthBar.SetHealth(currentHealth);
 	}
