@@ -5,22 +5,45 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float health = 100f;
+    
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>(); 
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Set currentHealth to maxHealth
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
+
+    private void Update() 
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("kokus");
+            TakeDamage();
+        }
+    }
+
+    void TakeDamage()
+	{
+        currentHealth =- 20;
+        healthBar.SetHealth(currentHealth);
+	}
 
     private void FixedUpdate()
     {
