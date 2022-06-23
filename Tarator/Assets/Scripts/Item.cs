@@ -25,6 +25,11 @@ public class Item : MonoBehaviour
             {
                 case "staff":
                 Instantiate(item, inventory.slots[0].transform,false);
+
+                if(item.transform == inventory.slots[0].transform)
+                {
+                    Debug.Log("its here");
+                }
                 break;
 
                 case "bow":
@@ -41,7 +46,5 @@ public class Item : MonoBehaviour
 
         
     }
-
-    
             
 }
