@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8218399909730053604}
   - component: {fileID: 6711703258280506883}
   m_Layer: 0
-  m_Name: shot
+  m_Name: GhostShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
