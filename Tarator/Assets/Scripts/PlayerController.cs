@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         // Checks if space key is pressed
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("kokus");
+            // Call TakeDamage function
             TakeDamage(20);
         }
     }
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     // Lower health depending on damage
     void TakeDamage(int damage)
 	{
-        currentHealth =- damage;
+        currentHealth -= damage;
 
         //Set slider's value to currentHealth
         healthBar.SetHealth(currentHealth);
