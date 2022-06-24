@@ -1,109 +1,80 @@
-import TextBox from "./Components/TextBox";
-import textBoxData from "./data/textBoxData";
-import Character from "./Components/Character";
-import Person from "./Components/Card";
-import characterData from "./data/characterData";
-import personData from "./data/personData";
-import "./style/style.css";
 import React from "react";
+import Card from "./Components/Card";
+import cardData from "./data/cardData";
+import "./style/style.css";
 
 function App() {
-  let currentScrollPosition = 0;
-  let positionUpdate = 250;
-
-  const box = React.useRef(null);
-  const scrollContainer = React.useRef(null);
-
-  function scrollRight() {
-    let maxPosition =
-      box.current.clientWidth - scrollContainer.current.clientWidth;
-
-    if (currentScrollPosition < -maxPosition) {
-      currentScrollPosition += positionUpdate;
-    }
-
-    scrollContainer.current.style.left = `-${currentScrollPosition}px`;
-  }
-
-  function scrollLeft() {
-    if (currentScrollPosition > 0) {
-      currentScrollPosition -= positionUpdate;
-    }
-
-    scrollContainer.current.style.left = `-${currentScrollPosition}px`;
-  }
-
-  // Cheching if the window has gone fullscrean
-  window.addEventListener("resize", () => {
-    currentScrollPosition = 0;
-    scrollContainer.current.style.left = `0px`;
-  });
-
   return (
     <>
-      {/* the poster */}
-      <div className="poster">
-        <button className="poster__download__button">DOWNLOAD</button>
+      {/* poster */}
+      <div className="poster"></div>
+
+      <div className="download--buttons">
+        <button className="download__button__mobil download__button">
+          PLAY ON PC
+        </button>
+
+        <button className="download__button__pc download__button">
+          DOWNLOAD
+        </button>
       </div>
 
-      {/* The text box */}
-      <div className="textbox--container">
-        {textBoxData.map((item) => {
-          return (
-            <TextBox
-              title={item.title}
-              content={item.content}
-              number={item.number}
-            />
-          );
-        })}
+      {/* Game info */}
+      <div className="game--info--container">
+        <p className="game__info">
+          A ghosthunter dungeon crawler game, in which you and your cat
+          companion go around killing ghosts.
+        </p>
       </div>
 
-      {/* The characters */}
-      <div className="characters--container">
-        <div className="character--title--number">
-          <div className="textbox__number">3</div>
+      {/* Banner */}
+      <div className="banner--container">
+        <div className="baner"></div>
+        <p className="banner__caption">Local ghost hunter duo</p>
+      </div>
 
-          <h2 className="characters__title">Characters</h2>
+      {/* pictures */}
+      <div className="image--container">
+        <div className="image image1"></div>
+        <div className="image image2"></div>
+      </div>
+
+      {/* developers */}
+      <div className="developers--container">
+        <h2 className="developer__title">DEVELOPERS</h2>
+        <div className="developer__card--container">
+          <div className="developer__card--container--column1">
+            {cardData.map((item) => {
+              return item.id < 3 && <Card item={item} key={item.id} />;
+            })}
+          </div>
+
+          <div className="developer__card--container--column2">
+            {cardData.map((item) => {
+              return (
+                item.id > 3 &&
+                item.id <= 6 && <Card item={item} key={item.id} />
+              );
+            })}
+          </div>
+
+          <div className="developer__card--container--column3">
+            {cardData.map((item) => {
+              return (
+                item.id > 5 &&
+                item.id <= 7 && <Card item={item} key={item.id} />
+              );
+            })}
+          </div>
         </div>
-
-        <div className="characters__decoration"></div>
-        {characterData.map((item) => {
-          return <Character item={item} />;
-        })}
       </div>
 
-      <div className="gameplay">
-        <TextBox
-          title="Gameplay"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cum dolor numquam consequuntur eos possimus atque dicta optio est enim?"
-          number={4}
-        />
-        <video controls className="gameplay__video"></video>
-      </div>
-
-      <div className="card--container" ref={box}>
-        <div className="scroll__container" ref={scrollContainer}>
-          {personData.map((item) => {
-            return <Person item={item} />;
-          })}
-        </div>
-        <div className="card__button__left" onClick={scrollLeft}></div>
-        <div className="card__button__right" onClick={scrollRight}></div>
-      </div>
-
-      <div className="down--download--button">
-        <button className="poster__download__button">DOWNLOAD</button>
-      </div>
-
-      {/* footer */}
+      {/* Footer */}
       <footer className="footer">
-        <a
-          href="https://github.com/codingburgas/2122-the-games--adventures-team"
-          className="footer__link"
-        >
-          GitHub
+        <a href="#" className="footer__github__link">
+          Github
         </a>
+        <div className="footer__unity"></div>
       </footer>
     </>
   );
