@@ -5,9 +5,9 @@
 }
 
 :root {
-  --ff: "Comfortaa";
+  --ff: "Arial";
 
-  --fw-n: 400;
+  --fw-n: 300;
   --fw-m: 600;
   --fw-b: 900;
 
@@ -15,8 +15,9 @@
   --fs-3: 2rem;
   --fs-p: 1em;
 
-  --primary-color: #f8f8f8;
-  --accent-color: #5d5179;
+  --primary-color: #1f272d;
+  --secondary-color: #080a0b;
+  --accent-color: #607661;
 
   --fs-cl: #eff2f4;
 
@@ -26,169 +27,332 @@
 }
 
 body {
-  background-color: var(--primary-color);
   font-family: var(--ff);
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
 }
 
+/* poster styling */
 .poster {
-  height: 25vh;
-  background-image: url("../img/poster.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.download--buttons {
+  height: 300px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: var(--spacer-md) auto;
 }
 
-.download__button {
+.poster__download__button {
+  width: 250px;
+  height: 40px;
   background-color: var(--accent-color);
-  padding: 15px 75px;
   border: none;
-  border-radius: 45px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: var(--fw-b);
+  letter-spacing: 3px;
+  --fs-3: 1.5em;
+  font-size: var(--fs-3);
   transition: 0.3s linear;
   cursor: pointer;
-  font-weight: var(--fw-b);
-  color: #eff2f4;
 }
 
-.download__button:hover {
+.poster__download__button:hover {
+  --accent-color: #495549;
+  background-color: var(--accent-color);
+  letter-spacing: 5px;
   transform: scale(1.05);
-  background-color: #4d4362;
 }
 
-.download__button:active {
+.poster__download__button:active {
   transform: scale(0.97);
-  background-color: #4d4362;
 }
 
-.download__button__pc {
-  display: none;
+.down--download--button {
+  text-align: center;
 }
 
-/* info */
-.game--info--container {
-  height: 50vh;
-  background-image: url("../img/border.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+/* textbox styling */
+.textbox,
+.character--container {
+  margin: var(--spacer-md) 20px;
+  text-align: center;
+  font-size: var(--fs-p);
+  color: var(--fs-cl);
+}
+.textbox__title,
+.characters__title {
+  font-size: var(--fs-3);
+  color: var(--fs-cl);
+}
+
+.textbox__title__image__container,
+.character--title--number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: var(--spacer) auto;
+}
+
+.textbox__number,
+.character__number {
+  width: 45px;
+  height: 45px;
+  background-color: #33375a;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: var(--fw-b);
+  font-size: 1.25rem;
+  color: #6f6f6f;
 }
 
-.game__info {
-  position: absolute;
+/* character */
+.character--title--number {
+  margin: auto 20px;
+}
+
+.characters__drawing {
+  height: 10.5em;
+  margin: auto 10px;
+}
+
+.character__drawing__description__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacer-lg);
+}
+
+.character__name {
+  margin: var(--spacer) auto;
+}
+
+/* abilities */
+.ability--box {
+  margin: var(--spacer-md) 5px;
+  background-color: #dfe5e9;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  border: 2px solid black;
+  border-radius: 28px;
+  color: #080a0b;
+  height: fit-content;
+}
+
+.ability__type {
+  margin-bottom: var(--spacer);
+}
+
+.ability__picture {
+  /* border: 2px solid yellow; */
+  width: 64px;
+  height: 64px;
+  margin-left: 15px;
+}
+
+.ability__description__type {
+  margin: calc(var(--spacer) - 5px) auto;
+}
+
+/* Gameplay */
+.gameplay {
   text-align: center;
-  font-size: calc(var(--fs-p) + 0.5rem);
-  max-width: 25ch;
 }
 
-/* Baner */
-.banner--container {
-  height: 30vh;
-  margin: var(--spacer-md) auto;
+.gameplay__video {
+  width: 90%;
+  margin: auto 20px;
 }
 
-.baner {
-  background-color: #4d4362;
-  height: 90%;
+/* about us */
+.card {
+  width: 250px;
+  height: 300px;
+  background-color: #add8e6;
+  margin: var(--spacer-lg) 20px;
+  border-bottom-right-radius: 45px;
+  border-top-left-radius: 45px;
+  border: 2px solid black;
 }
 
-.banner__caption {
-  text-align: center;
-  margin: var(--spacer);
+.card__image {
+  background-color: #495549;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-/* pictures */
-.image {
-  height: 30vh;
-  background-color: aqua;
-  margin: var(--spacer);
+.card--name--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: var(--spacer);
 }
 
-/* devs */
-.developers--container {
-  margin: var(--spacer-lg) auto;
-}
-
-.developer__title {
+.card__info {
   margin: var(--spacer-md);
 }
 
-/* cards */
 .card--container {
-  width: 100px;
-  height: 150px;
-  background-color: #5d5179;
-}
-
-.developer__card--container {
   display: flex;
-  justify-content: center;
+  overflow-x: visible;
   align-items: center;
   position: relative;
-  gap: 7.5em;
 }
 
-.developer__card--container--column1 {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
+body {
+  overflow-x: hidden;
 }
 
-.developer__card--container--column2 {
+.scroll__container {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  transition: linear 0.3s;
+  left: 0;
+}
+
+.card__button__right,
+.card__button__left {
+  background-image: url("../img/aboutUsAssets/right_arrow.png");
+  width: 64px;
+  height: 64px;
   position: absolute;
-  top: 10%;
-  gap: 10px;
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: 64px;
+  background-position: center;
+  transition: 0.2s linear;
+  cursor: pointer;
 }
 
-.developer__card--container--column3 {
-  display: flex;
-  flex-direction: column;
-  top: 20%;
-  gap: 10px;
+.card__button__left {
+  left: 0;
+  background-image: url("../img/aboutUsAssets/left_arrow.png");
+}
+
+.card__button__left:hover,
+.card__button__right:hover {
+  transform: scale(1.05);
+}
+
+.card__button__left:active,
+.card__button__right:active {
+  transform: scale(0.97);
 }
 
 /* footer */
 .footer {
-  height: 50px;
-  background-color: var(--accent-color);
-  margin-top: calc(var(--spacer-lg) * 2);
+  background-color: rgb(155, 145, 145);
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin-top: var(--spacer-lg);
+  height: 77px;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
-.footer__github__link {
-  position: absolute;
-  left: 20px;
+.footer__link {
   text-decoration: none;
-  color: white;
-  font-size: calc(var(--fs-3) - 0.6rem);
-  transition: 0.3s linear;
+  color: rgb(236, 236, 236);
+  font-size: 1.5rem;
+  margin: auto var(--spacer-md);
 }
 
-.footer__github__link:hover {
-  transform: scale(1.05);
-  color: rgb(229, 229, 229);
+.footer__link:hover {
+  color: rgb(204, 204, 204);
 }
 
-.footer__github__link:active {
+.footer__link:active {
   transform: scale(0.97);
 }
 
-.footer__unity {
-  height: 40px;
-  width: 120px;
-  background: url("../img/unity_icn.png");
+.card--container::before {
+  content: "";
   position: absolute;
-  right: 20px;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  background-color: #d9d9d9;
+  top: 20px;
+}
+
+.card--container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  background-color: #d9d9d9;
+  bottom: 20px;
+}
+
+.card--container {
+  position: relative;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 90em) {
+  .character--container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .textbox--container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textbox {
+    width: 70ch;
+  }
+
+  .character--title--number {
+    display: flex;
+    justify-content: center;
+    margin: var(--spacer-lg) auto;
+  }
+  .characters__ability__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .ability--box {
+    width: 30em;
+  }
+
+  .character--container {
+    display: flex;
+    margin: var(--spacer-lg);
+    gap: 20px;
+  }
+
+  .character__name__discription {
+    width: 40ch;
+  }
+
+  .character--container {
+    justify-content: center;
+  }
+
+  .gameplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .textbox__title__image__container {
+    width: 100%;
+    justify-content: center;
+  }
 }
