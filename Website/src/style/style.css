@@ -123,9 +123,23 @@ body {
 
 /* cards */
 .card--container {
-  width: 100px;
-  height: 150px;
+  width: 130px;
+  height: 200px;
   background-color: #5d5179;
+  position: relative;
+}
+
+.card__icon {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.card__role {
+  position: absolute;
+  right: 40px;
+  bottom: 5px;
+  width: 5ch;
 }
 
 .developer__card--container {
@@ -133,7 +147,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: 7.5em;
+  gap: 10em;
 }
 
 .developer__card--container--column1 {
@@ -187,8 +201,32 @@ body {
 
 .footer__unity {
   height: 40px;
-  width: 120px;
-  background: url("../img/unity_icn.png");
+  width: 110px;
+  background: url("../img/madeWithUnity.png");
   position: absolute;
   right: 20px;
+}
+
+@media only screen and (min-width: 40em) {
+  .download__button__mobil {
+    display: none;
+  }
+
+  .download__button__pc {
+    display: block;
+  }
+
+  .game--info--container {
+    background-image: url("../img/border-big.png");
+  }
+
+  .game__info {
+    max-width: 60ch;
+  }
+
+  .image {
+    width: 40vw;
+    margin: var(--spacer) auto;
+    height: 50vh;
+  }
 }
