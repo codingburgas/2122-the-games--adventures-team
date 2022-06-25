@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
         // Disable circle collider
         area = GetComponent<CircleCollider2D>();
         area.enabled = false;
+
+        
     }
 
     private void Update() 
@@ -74,6 +76,13 @@ public class PlayerController : MonoBehaviour
 
         RangeAttack(isRangedSelected);
         Splash(isSplashSelected);
+        
+        if(Input.GetKeyUp(KeyCode.R) && currentHealth < 100)
+        {
+            Heal();
+        }
+
+        healthBar.SetHealth(currentHealth);
     }
 
     // Lower health depending on damage
@@ -181,9 +190,17 @@ public class PlayerController : MonoBehaviour
 
     void Splash(bool isSelected)
     {
-        if(isSelected && Input.GetKeyDown(KeyCode.E))
+        if(isSelected && Input.GetKeyUp(KeyCode.E))
         {
             Debug.Log("is enabled");
         }
     }
+
+    // Healing
+    void Heal()
+    {
+        currentHealth += 20;
+        Debug.Log(currentHealth);
+    }
+
 }
