@@ -22,10 +22,15 @@ public class PlayerController : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>(); 
 
     // Variables for ranged attack
-    public RangedAttack ranged;
     public bool isRangedSelected;
 
+    // Variables for splash attack
+    public bool isSplashSelected;
+    public CircleCollider2D area;
+
     public GameObject projectile;
+
+
     // Start is called on the frame when a script is enabled just before
     // any of the Update methods is called the first time.
     private void Start()
@@ -36,6 +41,10 @@ public class PlayerController : MonoBehaviour
         // Set currentHealth to maxHealth
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        // Disable circle collider
+        area = GetComponent<CircleCollider2D>();
+        area.enabled = false;
     }
 
     private void Update() 
@@ -50,10 +59,21 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("2");
+            area.enabled = false;
             isRangedSelected = true;
+            isSplashSelected = false;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Debug.Log("3");
+            area.enabled = true;
+            isRangedSelected = false;
+            isSplashSelected = true;
         }
 
         RangeAttack(isRangedSelected);
+        Splash(isSplashSelected);
     }
 
     // Lower health depending on damage
@@ -126,6 +146,13 @@ public class PlayerController : MonoBehaviour
 
     public int offset;
 
+
+    public void Timer(float timeBetweenShots, float startTimeBetweenShots)
+    {
+        
+    }
+
+
     public void RangeAttack(bool isSelected)
     {
         if(isSelected && Input.GetKey(KeyCode.E))
@@ -139,10 +166,24 @@ public class PlayerController : MonoBehaviour
             {
                 timeBetweenShots -= Time.deltaTime;
             }
-
-            
         }
     }
 
+    public BoxCollider2D box;
+    // Splash attack
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.tag == "Enemy" && isSplashSelected)
+        {
+            Debug.Log("enemy");
+        }
+    }
 
+    void Splash(bool isSelected)
+    {
+        if(isSelected && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("is enabled");
+        }
+    }
 }
