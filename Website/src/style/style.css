@@ -93,11 +93,16 @@ body {
 .banner--container {
   height: 30vh;
   margin: var(--spacer-md) auto;
+  overflow: hidden;
 }
 
 .baner {
-  background-color: #4d4362;
   height: 90%;
+  width: 100vw;
+  background-image: url("../img/tayAndPenguinBanner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .banner__caption {
@@ -205,6 +210,9 @@ body {
   background: url("../img/madeWithUnity.png");
   position: absolute;
   right: 20px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media only screen and (min-width: 40em) {
