@@ -1,15 +1,22 @@
-export default function Person(props) {
+import githubIcon from "../img/github.png";
+
+export default function Card(props) {
   return (
     <>
-      <div className="card">
-        <div className="card--name--image">
-          <div className="card__image"></div>
-          <h2 className="card__name">{props.item.name}</h2>
-        </div>
-        <div className="card__info">
-          <p className="card__info__github">Github: {props.item.github}</p>
-          <p className="card__info__outlook">Email: {props.item.outlook}</p>
-        </div>
+      <div className="card--container">
+        <a href={props.item.github} target="__blank">
+          <img
+            src={githubIcon}
+            alt=""
+            className="card__icon"
+            width="35px"
+            height="35px"
+          />
+        </a>
+
+        <img src={props.item.img} alt="" className="card__image" />
+
+        <h4 className="card__role">{props.item.role}</h4>
       </div>
     </>
   );

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     // Variables for movement
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
-     Vector2 movementInput;
+    public Vector2 movementInput;
     public ContactFilter2D movementFilter;
 
     // Variables for health
@@ -17,10 +17,15 @@ public class PlayerController : MonoBehaviour
     public HealthBar healthBar;
 
    // Variables for flipX
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>(); 
 
+    // Variables for ranged attack
+    public RangedAttack ranged;
+    public bool isRangedSelected;
+
+    public GameObject projectile;
     // Start is called on the frame when a script is enabled just before
     // any of the Update methods is called the first time.
     private void Start()
@@ -41,6 +46,14 @@ public class PlayerController : MonoBehaviour
             // Call TakeDamage function
             TakeDamage(20);
         }
+
+        if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("2");
+            isRangedSelected = true;
+        }
+
+        RangeAttack(isRangedSelected);
     }
 
     // Lower health depending on damage
@@ -54,7 +67,7 @@ public class PlayerController : MonoBehaviour
             currentHealth = 1;
         }
 
-        //Set slider's value to currentHealth
+        // Set slider's value to currentHealth
         healthBar.SetHealth(currentHealth);
 	}
 
@@ -106,4 +119,30 @@ public class PlayerController : MonoBehaviour
     {
         movementInput = movementValue.Get<Vector2>();
     }
+
+    public Transform point;
+    private float timeBetweenShots = 0;
+    public float startTimeBetweenShots;
+
+    public int offset;
+
+    public void RangeAttack(bool isSelected)
+    {
+        if(isSelected && Input.GetKey(KeyCode.E))
+        {
+            if(timeBetweenShots <= 0)
+            {
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                timeBetweenShots = startTimeBetweenShots;
+            }
+            else
+            {
+                timeBetweenShots -= Time.deltaTime;
+            }
+
+            
+        }
+    }
+
+
 }
