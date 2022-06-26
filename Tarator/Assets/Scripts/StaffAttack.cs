@@ -15,14 +15,14 @@ public class StaffAttack : MonoBehaviour
 
     public void AttackRight()
     {
-        print("Attack Right");
+        Debug.Log("Right");
         staffCollider.enabled = true;
         transform.position = attackOffset;
     }
 
     public void AttackLeft()
     {
-        print("Attack Left");
+         Debug.Log("Left");
         staffCollider.enabled = true;
         transform.position = new Vector3(attackOffset.x * -1, attackOffset.y);
     }

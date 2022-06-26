@@ -27,12 +27,11 @@ public class PlayerController : MonoBehaviour
 
     // Variables for ranged attack
     public bool isRangedSelected = false;
+    public RangedAttack rangeAttack;
 
     // Variables for splash attack
     public bool isSplashSelected = false;
     public CircleCollider2D area;
-
-    public GameObject projectile;
 
 
     // Start is called on the frame when a script is enabled just before
@@ -49,9 +48,8 @@ public class PlayerController : MonoBehaviour
         // Disable circle collider
         area = GetComponent<CircleCollider2D>();
         area.enabled = false;
-
-        
     }
+
 
     private void Update() 
     {
@@ -66,7 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("1");
             area.enabled = false;
-            isMeleeSelected =  true;
+            isMeleeSelected = true;
             isRangedSelected = false;
             isSplashSelected = false;
         }
@@ -89,8 +87,8 @@ public class PlayerController : MonoBehaviour
             isSplashSelected = true;
         }
 
-        SwordAttack(isMeleeSelected);
-        RangeAttack(isRangedSelected);
+        StaffAttack(isMeleeSelected);
+        RangedAttack(isRangedSelected);
         Splash(isSplashSelected);
 
         
@@ -166,35 +164,6 @@ public class PlayerController : MonoBehaviour
         movementInput = movementValue.Get<Vector2>();
     }
 
-    public Transform point;
-    private float timeBetweenShots = 0;
-    public float startTimeBetweenShots;
-
-    public int offset;
-
-
-    public void Timer(float timeBetweenShots, float startTimeBetweenShots)
-    {
-        
-    }
-
-
-    public void RangeAttack(bool isSelected)
-    {
-        if(isSelected && Input.GetKeyDown(KeyCode.E))
-        {
-            if(timeBetweenShots <= 0)
-            {
-                Instantiate(projectile, transform.position, Quaternion.identity);
-                timeBetweenShots = startTimeBetweenShots;
-            }
-            else
-            {
-                timeBetweenShots -= Time.deltaTime;
-            }
-        }
-    }
-
     public BoxCollider2D box;
     // Splash attack
     void OnTriggerEnter2D(Collider2D other) 
@@ -220,8 +189,16 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentHealth);
     }
 
+    
+    void RangedAttack(bool isSelected)
+    {
+        if(isSelected && Input.GetKeyDown(KeyCode.E))
+        {
+            rangeAttack.Shoot();
+        }   
+    }
 
-    void SwordAttack(bool isSelected)
+    void StaffAttack(bool isSelected)
     {
         if(isSelected && Input.GetKeyDown(KeyCode.E))
         {
@@ -234,7 +211,5 @@ public class PlayerController : MonoBehaviour
                 staffAttack.AttackRight();
             }
         }
-        
-        
     }
 }
