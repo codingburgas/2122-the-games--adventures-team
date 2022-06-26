@@ -22239,7 +22239,7 @@ MonoBehaviour:
   speed: 0.78
   stoppintDistance: 1
   retreatDistance: 0.6
-  startTimeBetweenShots: 0.25
+  startTimeBetweenShots: 0.4
   projectile: {fileID: 3230810921498079257, guid: 83ac1687fe236694db684d5b24c12db6, type: 3}
 --- !u!61 &1101438157
 BoxCollider2D:
@@ -23109,7 +23109,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7772795, y: 1}
+    m_SensorSize: {x: 2.1880999, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

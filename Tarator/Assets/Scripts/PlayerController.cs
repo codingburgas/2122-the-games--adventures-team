@@ -21,11 +21,15 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>(); 
 
+    // Variables for melee attack
+    public bool isMeleeSelected = false;
+    public StaffAttack staffAttack;
+
     // Variables for ranged attack
-    public bool isRangedSelected;
+    public bool isRangedSelected = false;
 
     // Variables for splash attack
-    public bool isSplashSelected;
+    public bool isSplashSelected = false;
     public CircleCollider2D area;
 
     public GameObject projectile;
@@ -58,10 +62,20 @@ public class PlayerController : MonoBehaviour
             TakeDamage(20);
         }
 
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("1");
+            area.enabled = false;
+            isMeleeSelected =  true;
+            isRangedSelected = false;
+            isSplashSelected = false;
+        }
+
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("2");
             area.enabled = false;
+            isMeleeSelected = false;
             isRangedSelected = true;
             isSplashSelected = false;
         }
@@ -70,12 +84,15 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("3");
             area.enabled = true;
+            isMeleeSelected = false;
             isRangedSelected = false;
             isSplashSelected = true;
         }
 
+        SwordAttack(isMeleeSelected);
         RangeAttack(isRangedSelected);
         Splash(isSplashSelected);
+
         
         if(Input.GetKeyUp(KeyCode.R) && currentHealth < 100)
         {
@@ -164,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
     public void RangeAttack(bool isSelected)
     {
-        if(isSelected && Input.GetKey(KeyCode.E))
+        if(isSelected && Input.GetKeyDown(KeyCode.E))
         {
             if(timeBetweenShots <= 0)
             {
@@ -190,7 +207,7 @@ public class PlayerController : MonoBehaviour
 
     void Splash(bool isSelected)
     {
-        if(isSelected && Input.GetKeyUp(KeyCode.E))
+        if(isSelected && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("is enabled");
         }
@@ -203,4 +220,21 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentHealth);
     }
 
+
+    void SwordAttack(bool isSelected)
+    {
+        if(isSelected && Input.GetKeyDown(KeyCode.E))
+        {
+            if(spriteRenderer.flipX == true)
+            {
+                staffAttack.AttackLeft();
+            }
+            else
+            {
+                staffAttack.AttackRight();
+            }
+        }
+        
+        
+    }
 }
