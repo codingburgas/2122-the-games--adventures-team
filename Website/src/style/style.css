@@ -31,11 +31,42 @@ body {
 }
 
 .poster {
+  animation: animation 250ms ease-in-out;
+}
+
+.download--buttons {
+  animation: animation 550ms ease-in-out;
+}
+
+.game--info--container {
+  animation: animation 1s ease-in-out;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.poster {
   height: 50vh;
   background-image: url("../img/posterWithoutText.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+.poster::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#00000000 92%, var(--primary-color));
+  z-index: 2;
 }
 
 .download--buttons {
@@ -64,10 +95,6 @@ body {
 .download__button:active {
   transform: scale(0.97);
   background-color: #4d4362;
-}
-
-.download__button__pc {
-  display: none;
 }
 
 /* info */
@@ -116,6 +143,10 @@ body {
   height: 30vh;
   background-color: aqua;
   margin: var(--spacer);
+}
+
+.image--container {
+  overflow: hidden;
 }
 
 /* devs */
@@ -267,11 +298,35 @@ body {
   background-position: center;
 }
 
-@media only screen and (min-width: 40em) {
-  .download__button__mobil {
-    display: none;
-  }
+/* fade animations */
+.fade__in {
+  opacity: 0;
+  transition: 250ms ease-in;
+}
 
+.fade__in.appear {
+  opacity: 1;
+}
+
+.image__from__left {
+  transform: translateX(-100%);
+}
+
+.image__from__right {
+  transform: translateX(100%);
+}
+
+.image__from__right,
+.image__from__left {
+  transition: 400ms ease-in;
+}
+
+.image__from__right.appear,
+.image__from__left.appear {
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 40em) {
   .download__button__pc {
     display: block;
   }
@@ -290,7 +345,7 @@ body {
     height: 50vh;
   }
   .poster {
-    background-image: url("../img/posterButLonger.jpg");
+    background-image: url("../img/longerPosterWithoutText.jpg");
   }
   .developer__card--container {
     flex-direction: row;
