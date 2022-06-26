@@ -36,7 +36,6 @@ https://github.com/PPDimitrakova20/Indigo.git
 - [Unity](https://unity.com) - Game Engine
   - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) - language used to create the applicatiom
   - [Visual Studio Code](https://code.visualstudio.com) - Source Code Editor
-- [Word](https://www.microsoft.com/bg-bg/microsoft-365/word) - Documentation
 - [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) - QA Documentation
 - [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint)- Presentation
 
