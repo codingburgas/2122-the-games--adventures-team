@@ -71,7 +71,6 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("1");
             area.enabled = false;
             isMeleeSelected = true;
             isRangedSelected = false;
@@ -80,7 +79,6 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("2");
             area.enabled = false;
             isMeleeSelected = false;
             isRangedSelected = true;
@@ -89,7 +87,6 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("3");
             area.enabled = false;
             isMeleeSelected = false;
             isRangedSelected = false;
@@ -183,14 +180,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Splash(bool isSelected)
-    {
-        if(isSelected && Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("is enabled");
-        }
-    }
-
     // Healing
     void Heal()
     {
@@ -220,13 +209,17 @@ public class PlayerController : MonoBehaviour
                 staffAttack.AttackRight();
             }
         }
+        if(isSelected && Input.GetKeyUp(KeyCode.E))
+        {
+            staffAttack.StopAttack();
+        }
     }
 
     void SplashAttack(bool isSelected)
     {
         if(isSelected && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("SPLASH");
+
         }
     }
 }

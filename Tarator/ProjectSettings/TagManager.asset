@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Slot
-  - Enemy
+  - FastGhost
+  - TankGhost
+  - ShooterGhost
   layers:
   - Default
   - TransparentFX

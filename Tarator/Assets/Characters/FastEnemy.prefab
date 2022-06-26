@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4350367538827551734}
   m_Layer: 0
   m_Name: FastEnemy
-  m_TagString: Enemy
+  m_TagString: FastGhost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2.25, y: 2.25}
   m_EdgeRadius: 0
 --- !u!114 &4350367538827551734
 MonoBehaviour:
@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a5a4a027d6a634aa4b9725ff7da86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   speed: 0.95
-  StoppintDistance: 0.3
+  StoppintDistance: 0.5
