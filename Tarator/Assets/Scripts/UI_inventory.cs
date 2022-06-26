@@ -13,16 +13,16 @@ public class UI_inventory : MonoBehaviour
     public GameObject SpecialWeapon;
     public GameObject RangedWeapon;
 
-    private void Awake()
+    private void Start()
     {
-          MeleeWeapon = GameObject.Find("UI_Staff");
-          MeleeWeapon.SetActive(false);
+        //MeleeWeapon = GameObject.Find("UI_Staff");
+        MeleeWeapon.SetActive(false);
 
-          SpecialWeapon = GameObject.Find("UI_Vacuum");
-          SpecialWeapon.SetActive(false);
+        //SpecialWeapon = GameObject.Find("UI_Vacuum");
+        SpecialWeapon.SetActive(false);
           
-          RangedWeapon = GameObject.Find("UI_Bow");
-          RangedWeapon.SetActive(false);
+        //RangedWeapon = GameObject.Find("UI_Bow");
+        RangedWeapon.SetActive(false);
     }
     public void SetInventory(Inventory inventory)
     {
