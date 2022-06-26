@@ -271,6 +271,13 @@ body {
   background-repeat: no-repeat;
 }
 
+.image2 {
+  background: url("../img/gameImages/room.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* footer */
 .footer {
   height: 50px;

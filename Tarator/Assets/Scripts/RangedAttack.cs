@@ -24,5 +24,5 @@ public class RangedAttack : MonoBehaviour
     public void Shoot()
     {
         Instantiate(projectile, transform.position, Quaternion.identity);
-    }
+    } 
 }
