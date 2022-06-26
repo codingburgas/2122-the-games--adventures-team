@@ -3,22 +3,44 @@ import Card from "./Components/Card";
 import cardData from "./data/cardData";
 import "./style/style.css";
 import penguin from "./img/penguin.png";
+import { saveAs } from "file-saver";
 
 function App() {
-  React.useEffect(() => {
-    //get the download button
-    const mobileButton = document.querySelector(".download__button__mobile");
-    const pcButton = document.querySelector(".download__button__pc");
+  const saveFile = () => {
+    saveAs("./tarator.exe", "Tarator.md");
+  };
 
+  //get the download button
+  const mobileButton = React.useRef(null);
+  const pcButton = React.useRef(null);
+
+  // getting card container class
+  const cardContainer = React.useRef(null);
+
+  // getting the cat
+  const cat = React.useRef(null);
+
+  React.useEffect(() => {
     // check the device is mobile
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       )
     ) {
-      pcButton.style.display = "none";
+      // hiding the desktop button when it is on mobile
+      pcButton.current.style.display = "none";
+
+      // making the gap between team photo smaller when it is on phone
+      cardContainer.current.style.gap = "9em";
+
+      // making the cat smaller when it is on mobile
+      cat.current.style.width = "100px";
+
+      cat.current.style.bottom = "-75px";
+      cat.current.style.right = "20px";
     } else {
-      mobileButton.style.display = "none";
+      // hiding the mobile button when it is on desktop
+      mobileButton.current.style.display = "none";
     }
 
     // get the elements
@@ -59,11 +81,18 @@ function App() {
       <div className="poster"></div>
 
       <div className="download--buttons">
-        <button className="download__button__mobile download__button">
+        <button
+          className="download__button__mobile download__button"
+          ref={mobileButton}
+        >
           PLAY ON PC
         </button>
 
-        <button className="download__button__pc download__button">
+        <button
+          className="download__button__pc download__button"
+          ref={pcButton}
+          onClick={saveFile}
+        >
           DOWNLOAD
         </button>
       </div>
@@ -91,7 +120,7 @@ function App() {
       {/* developers */}
       <div className="developers--container fade__in">
         <h2 className="developer__title">TEAM</h2>
-        <div className="developer__card--container">
+        <div className="developer__card--container" ref={cardContainer}>
           <div className="developer__card--container--column1">
             {cardData.map((item) => {
               return item.id < 3 && <Card item={item} key={item.id} />;
@@ -116,7 +145,7 @@ function App() {
             })}
           </div>
         </div>
-        <img src={penguin} alt="" className="penguin" />
+        <img src={penguin} alt="" className="penguin" ref={cat} />
       </div>
 
       {/* Footer */}
@@ -128,6 +157,7 @@ function App() {
         >
           Github
         </a>
+
         <div className="footer__unity"></div>
       </footer>
     </>

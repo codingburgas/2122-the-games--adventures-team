@@ -10,31 +10,31 @@ import Ivan from "../img/aboutUsImages/IvanStoychev.jpg";
 let cardData = [
   {
     img: Presiyan,
-    role: "Leader",
+    role: "Quality assurance",
     id: 0,
     github: "https://github.com/PSStefanov19",
   },
   {
     img: Stefan,
-    role: "Leader",
+    role: "Scrum Trainer",
     id: 1,
     github: "https://github.com/SORavninov19",
   },
   {
     img: Pamela,
-    role: "Game Developer",
+    role: "Backend Developer",
     id: 2,
     github: "https://github.com/PPDimitrakova20",
   },
   {
     img: Plamen,
-    role: "Game Developer",
+    role: "Backend Developer",
     id: 3,
     github: "https://github.com/PRDaylyanov20",
   },
   {
     img: Elena,
-    role: "Game Developer",
+    role: "Frontend Developer",
     id: 4,
     github: "https://github.com/ERKeserdzhieva20",
   },

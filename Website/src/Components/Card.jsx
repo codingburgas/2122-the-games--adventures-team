@@ -1,9 +1,23 @@
 import githubIcon from "../img/github.png";
+import React from "react";
 
 export default function Card(props) {
+  const card = React.useRef(null);
+
+  React.useEffect(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      card.current.style.width = "120px";
+      card.current.style.height = "150px";
+    }
+  }, []);
+
   return (
     <>
-      <div className="card--container">
+      <div className="card--container" ref={card}>
         <div className="card__darken"></div>
         <img src={props.item.img} alt="" className="card__image" />
         <div className="card__info">
