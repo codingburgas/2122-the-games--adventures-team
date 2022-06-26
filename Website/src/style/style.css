@@ -164,7 +164,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: 10em;
+  gap: 10.5em;
 }
 
 .developer__card--container--column1 {
@@ -251,5 +251,22 @@ body {
   }
   .poster {
     background-image: url("../img/posterButLonger.jpg");
+  }
+  .developer__card--container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .developer__card--container--column1 {
+    flex-direction: row;
+  }
+
+  .developer__card--container--column2 {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .developer__card--container--column3 {
+    flex-direction: row;
   }
 }
