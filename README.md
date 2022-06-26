@@ -1,5 +1,6 @@
 <p align="center">
-  <img height="500" width="500" src="Tarator/Assets/Logo/tarator logo.png" alt="Logo"/>
+  <img height="500" width="500" src="Tarator/Assets/Logo/taratorLogoBlackText.png#gh-light-mode-only" alt="Logo"/>
+  <img height="500" width="500" src="Tarator/Assets/Logo/taratorLogoWhiteText.png#gh-dark-mode-only" alt="Logo"/>
 </p>
 
 <hr>
