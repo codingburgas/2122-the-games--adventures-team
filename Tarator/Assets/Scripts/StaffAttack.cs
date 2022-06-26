@@ -45,5 +45,25 @@ public class StaffAttack : MonoBehaviour
                 fastEnemy.Health -= damage;
             }
         }
+        if(other.tag == "TankGhost")
+        {
+            TankEnemy TankEnemy = other.GetComponent<TankEnemy>();
+
+            if(TankEnemy != null)
+            {
+                Debug.Log("HIT");
+                TankEnemy.Health -= damage;
+            }
+        }
+        if(other.tag == "ShooterGhost")
+        {
+            ShooterEnemy ShooterEnemy = other.GetComponent<ShooterEnemy>();
+
+            if(ShooterEnemy != null)
+            {
+                Debug.Log("HIT");
+                ShooterEnemy.Health -= damage;
+            }
+        }
     }
 }

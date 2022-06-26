@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class TankEnemy : MonoBehaviour
 {
+    public float Health {
+        set {
+            health = value;
+
+            if(health <= 0)
+            {
+                Defeated();
+            }
+        }
+        get {
+            return health;
+        }
+    }
+
+    public float health = 200;
+
+
     public float speed;
     public float StoppintDistance;
 
@@ -20,5 +37,16 @@ public class TankEnemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }    
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
+    }
+
+    public void Defeated()
+    {
+        Debug.Log("DED");
+        Destroy(gameObject);
     }
 }
