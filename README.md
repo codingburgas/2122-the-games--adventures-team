@@ -69,5 +69,5 @@ https://github.com/PPDimitrakova20/Indigo.git
 - [Plamen Daylyanov](https://github.com/PRDaylyanov20) - Backend Developer
 - [Elena Keserdzhieva](https://github.com/ERKeserdzhieva20) - Frontend Developer
 - [Ivan Stoychev](https://github.com/IYStoychev21) - Web Developer
-- [Antonia Taneva](https://github.com/ATTaneva21) - Designer
-- [Emma Georgieva](https://github.com/EGGeorgieva21) - Designer
+- [Antonia Taneva](https://github.com/ATTaneva21) - Game Designer
+- [Emma Georgieva](https://github.com/EGGeorgieva21) - Web Designer
