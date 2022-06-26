@@ -94,6 +94,7 @@ body {
   height: 30vh;
   margin: var(--spacer-md) auto;
   overflow: hidden;
+  padding-bottom: var(--spacer);
 }
 
 .baner {
@@ -128,10 +129,21 @@ body {
 
 /* cards */
 .card--container {
-  width: 130px;
-  height: 200px;
-  background-color: #5d5179;
+  width: 150px;
+  height: 225px;
   position: relative;
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: aqua; */
+  z-index: -1;
 }
 
 .card__icon {

@@ -52,8 +52,8 @@ function App() {
           <div className="developer__card--container--column2">
             {cardData.map((item) => {
               return (
-                item.id > 3 &&
-                item.id <= 6 && <Card item={item} key={item.id} />
+                item.id >= 3 &&
+                item.id < 6 && <Card item={item} key={item.id} />
               );
             })}
           </div>
