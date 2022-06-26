@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1472096080004540913}
   m_Layer: 0
   m_Name: TankEnemy
-  m_TagString: Enemy
+  m_TagString: TankGhost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
