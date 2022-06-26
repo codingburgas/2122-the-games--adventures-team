@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Item : MonoBehaviour
 {
-    private Inventory inventory;
+    public UI_inventory inventory;
     public GameObject item;
+
     public string itemType;
 
     // Start is called on the frame when a script is enabled just before
     // any of the Update methods is called the first time.
-    private void Start()
-    {
-       inventory = GameObject.FindGameObjectWithTag("Slot").GetComponent<Inventory>();
+    private void Start(){
+
     }
 
     /// Sent when another object enters a trigger collider attached to this
@@ -26,17 +25,20 @@ public class Item : MonoBehaviour
             {
                 // Place to Melee Slot
                 case "staff":
-                Instantiate(item, inventory.slots[0].transform,false);
+                inventory.inventory.addItem(new Items {itemType = Items.ItemType.MeleeWeapon});
+                Debug.Log(inventory.inventory.itemList.Count);
                 break;
 
                 // Place to Ranged Slot
                 case "bow":
-                Instantiate(item, inventory.slots[1].transform,false);
+                inventory.inventory.addItem(new Items {itemType = Items.ItemType.RangedWeapon});
+                Debug.Log(inventory.inventory.itemList.Count);
                 break;
 
                 // Place to Special Weapon Slot
                 case "vacuum":
-                Instantiate(item, inventory.slots[2].transform,false);
+                inventory.inventory.addItem(new Items {itemType = Items.ItemType.SpecialWeapon});
+                Debug.Log(inventory.inventory.itemList.Count);
                 break;
             }
 

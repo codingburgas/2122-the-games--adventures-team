@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 movementInput;
     public ContactFilter2D movementFilter;
 
+    private Inventory inventory;
+
+    [SerializeField] private UI_inventory uiInvetory;
+
     // Variables for health
     public int maxHealth = 100;
     public int currentHealth;
@@ -38,6 +42,9 @@ public class PlayerController : MonoBehaviour
     // any of the Update methods is called the first time.
     private void Start()
     {
+        inventory = new Inventory();
+        uiInvetory.SetInventory(inventory);
+
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -53,6 +60,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update() 
     {
+        uiInvetory.SetInventory(inventory);
+        
         // Checks if space key is pressed
         if(Input.GetKeyDown(KeyCode.Space))
         {
