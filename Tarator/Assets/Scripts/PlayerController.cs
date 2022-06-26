@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private Inventory inventory;
 
-    [SerializeField] private UI_inventory uiInvetory;
+    public UI_inventory uiInvetory;
 
     // Variables for health
     public int maxHealth = 100;
