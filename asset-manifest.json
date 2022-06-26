@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.225a5d73.css",
-    "main.js": "/static/js/main.11f4bba7.js",
+    "main.css": "/static/css/main.6c959e91.css",
+    "main.js": "/static/js/main.2dcef5e9.js",
     "static/media/mainMenu.png": "/static/media/mainMenu.6a301ec7e94717e090cd.png",
     "static/media/longerPosterWithoutText.jpg": "/static/media/longerPosterWithoutText.703fef1984f0794c64df.jpg",
     "static/media/tayAndPenguinBanner.png": "/static/media/tayAndPenguinBanner.f0f0fb0ce32405567ef6.png",
     "static/media/github.png": "/static/media/github.3ec61b93854178c47369.png",
+    "static/media/room.png": "/static/media/room.0e4f6bcc96d0018e765b.png",
     "static/media/posterWithoutText.jpg": "/static/media/posterWithoutText.9346250e8da10be08139.jpg",
     "static/media/Antoniya.jpg": "/static/media/Antoniya.141efb70f8002d28a5fa.jpg",
     "static/media/IvanStoychev.jpg": "/static/media/IvanStoychev.19aee13952ea6ecd97bf.jpg",
@@ -20,11 +21,11 @@
     "static/media/Stefan.jpg": "/static/media/Stefan.1c3c486eaeb50db76afb.jpg",
     "static/media/madeWithUnity.png": "/static/media/madeWithUnity.ff7ee431a2b159d82e8f.png",
     "index.html": "/index.html",
-    "main.225a5d73.css.map": "/static/css/main.225a5d73.css.map",
-    "main.11f4bba7.js.map": "/static/js/main.11f4bba7.js.map"
+    "main.6c959e91.css.map": "/static/css/main.6c959e91.css.map",
+    "main.2dcef5e9.js.map": "/static/js/main.2dcef5e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.225a5d73.css",
-    "static/js/main.11f4bba7.js"
+    "static/css/main.6c959e91.css",
+    "static/js/main.2dcef5e9.js"
   ]
 }
