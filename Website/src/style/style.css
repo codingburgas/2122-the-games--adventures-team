@@ -156,6 +156,7 @@ body {
 
 .developer__title {
   margin: var(--spacer-md);
+  text-align: center;
 }
 
 /* cards */
@@ -228,6 +229,10 @@ body {
   gap: 10.5em;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .developers--container {
   position: relative;
 }
@@ -255,8 +260,15 @@ body {
 
 .penguin {
   position: absolute;
-  right: 20px;
+  right: 10px;
   bottom: -100px;
+}
+
+.image1 {
+  background: url("../img/gameImages/mainMenu.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* footer */
@@ -309,11 +321,11 @@ body {
 }
 
 .image__from__left {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .image__from__right {
-  transform: translateX(100%);
+  transform: translateX(50%);
 }
 
 .image__from__right,
