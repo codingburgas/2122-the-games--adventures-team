@@ -5,13 +5,61 @@ import "./style/style.css";
 import penguin from "./img/penguin.png";
 
 function App() {
+  React.useEffect(() => {
+    //get the download button
+    const mobileButton = document.querySelector(".download__button__mobile");
+    const pcButton = document.querySelector(".download__button__pc");
+
+    // check the device is mobile
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      pcButton.style.display = "none";
+    } else {
+      mobileButton.style.display = "none";
+    }
+
+    // get the elements
+    const faders = document.querySelectorAll(".fade__in");
+    const sliders = document.querySelectorAll(".slider__in");
+
+    let options = {
+      threshold: 0,
+      rootMargin: "0px 0px -200px 0px",
+    };
+
+    const appearOnScroll = new IntersectionObserver(
+      (entries, appearOnScroll) => {
+        entries.forEach((entries) => {
+          if (!entries.isIntersecting) {
+            return;
+          } else {
+            entries.target.classList.add("appear");
+            appearOnScroll.unobserve(entries.target);
+          }
+        });
+      },
+      options
+    );
+
+    faders.forEach((fader) => {
+      appearOnScroll.observe(fader);
+    });
+
+    sliders.forEach((slider) => {
+      appearOnScroll.observe(slider);
+    });
+  }, []);
+
   return (
     <>
       {/* poster */}
       <div className="poster"></div>
 
       <div className="download--buttons">
-        <button className="download__button__mobil download__button">
+        <button className="download__button__mobile download__button">
           PLAY ON PC
         </button>
 
@@ -29,20 +77,20 @@ function App() {
       </div>
 
       {/* Banner */}
-      <div className="banner--container">
+      <div className="banner--container fade__in">
         <div className="baner"></div>
         <p className="banner__caption">Local ghost hunter duo</p>
       </div>
 
       {/* pictures */}
       <div className="image--container">
-        <div className="image image1"></div>
-        <div className="image image2"></div>
+        <div className="image image1 image__from__left slider__in"></div>
+        <div className="image image2 image__from__right slider__in"></div>
       </div>
 
       {/* developers */}
-      <div className="developers--container">
-        <h2 className="developer__title">DEVELOPERS</h2>
+      <div className="developers--container fade__in">
+        <h2 className="developer__title">TEAM</h2>
         <div className="developer__card--container">
           <div className="developer__card--container--column1">
             {cardData.map((item) => {
@@ -73,7 +121,11 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <a href="#" className="footer__github__link">
+        <a
+          href="https://github.com/codingburgas/2122-the-games--adventures-team"
+          className="footer__github__link"
+          target="__blank"
+        >
           Github
         </a>
         <div className="footer__unity"></div>
