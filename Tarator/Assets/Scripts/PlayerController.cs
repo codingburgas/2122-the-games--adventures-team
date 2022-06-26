@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private Inventory inventory;
 
-    [SerializeField] private UI_inventory uiInvetory;
+    public UI_inventory uiInvetory;
 
     // Variables for health
     public int maxHealth = 100;
@@ -34,8 +34,9 @@ public class PlayerController : MonoBehaviour
     public RangedAttack rangeAttack;
 
     // Variables for splash attack
-    public bool isSplashSelected = false;
     public CircleCollider2D area;
+    public bool isSplashSelected = false;
+    public SplashAttack spalshAttack;
 
 
     // Start is called on the frame when a script is enabled just before
@@ -52,7 +53,6 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        // Disable circle collider
         area = GetComponent<CircleCollider2D>();
         area.enabled = false;
     }
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
             Debug.Log("3");
-            area.enabled = true;
+            area.enabled = false;
             isMeleeSelected = false;
             isRangedSelected = false;
             isSplashSelected = true;
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
         StaffAttack(isMeleeSelected);
         RangedAttack(isRangedSelected);
-        Splash(isSplashSelected);
+        SplashAttack(isSplashSelected);
 
         
         if(Input.GetKeyUp(KeyCode.R) && currentHealth < 100)
@@ -219,6 +219,14 @@ public class PlayerController : MonoBehaviour
             {
                 staffAttack.AttackRight();
             }
+        }
+    }
+
+    void SplashAttack(bool isSelected)
+    {
+        if(isSelected && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("SPLASH");
         }
     }
 }
