@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     public float speed;
-
+    public int damage;
     private Transform player;
     private Vector2 target;
     private int lifespan =  1500;
@@ -37,10 +37,18 @@ public class EnemyShoot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
-        {
+        if(other.tag == "Player")
+        { 
+            PlayerController player = other.GetComponent<PlayerController>();
+
+            if(player != null)
+            {
+                Debug.Log("HIT");
+                player.Health -= damage;
+            }
             DestroyProjectile();
         }
+        
     }
 
     void DestroyProjectile()

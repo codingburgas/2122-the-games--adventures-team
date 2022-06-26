@@ -17,7 +17,22 @@ public class PlayerController : MonoBehaviour
 
     // Variables for health
     public int maxHealth = 100;
-    public int currentHealth;
+    public int Health {
+        set {
+            health = value;
+
+            if(health <= 0)
+            {
+                Defeated();
+            }
+        }
+        get {
+            return health;
+        }
+    }
+
+    public int health = 50;
+
     public HealthBar healthBar;
 
    // Variables for flipX
@@ -34,9 +49,8 @@ public class PlayerController : MonoBehaviour
     public RangedAttack rangeAttack;
 
     // Variables for splash attack
-    public CircleCollider2D area;
-    public bool isSplashSelected = false;
-    public SplashAttack spalshAttack;
+    //public bool isSplashSelected = false;
+    //public SplashAttack splashAttack;
 
 
     // Start is called on the frame when a script is enabled just before
@@ -50,11 +64,8 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Set currentHealth to maxHealth
-        currentHealth = maxHealth;
+        health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-
-        area = GetComponent<CircleCollider2D>();
-        area.enabled = false;
     }
 
 
@@ -62,64 +73,34 @@ public class PlayerController : MonoBehaviour
     {
         uiInvetory.SetInventory(inventory);
         
-        // Checks if space key is pressed
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            // Call TakeDamage function
-            TakeDamage(20);
-        }
-
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            area.enabled = false;
             isMeleeSelected = true;
             isRangedSelected = false;
-            isSplashSelected = false;
+            //isSplashSelected = false;
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            area.enabled = false;
             isMeleeSelected = false;
             isRangedSelected = true;
-            isSplashSelected = false;
+            //isSplashSelected = false;
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            area.enabled = false;
             isMeleeSelected = false;
             isRangedSelected = false;
-            isSplashSelected = true;
+            //isSplashSelected = true;
         }
 
         StaffAttack(isMeleeSelected);
         RangedAttack(isRangedSelected);
-        SplashAttack(isSplashSelected);
+       // SplashAttack(isSplashSelected);
 
-        
-        if(Input.GetKeyUp(KeyCode.R) && currentHealth < 100)
-        {
-            Heal();
-        }
 
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(health);
     }
-
-    // Lower health depending on damage
-    void TakeDamage(int damage)
-	{
-        currentHealth -= damage;
-
-        // Check if health is lower than 0
-        if(currentHealth <= 0)
-        {
-            currentHealth = 1;
-        }
-
-        // Set slider's value to currentHealth
-        healthBar.SetHealth(currentHealth);
-	}
 
     private void FixedUpdate()
     {
@@ -165,29 +146,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+    }
+
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
     }
 
-    public BoxCollider2D box;
-    // Splash attack
-    void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(other.tag == "Enemy" && isSplashSelected)
-        {
-            Debug.Log("enemy");
-        }
-    }
-
-    // Healing
-    void Heal()
-    {
-        currentHealth += 20;
-        Debug.Log(currentHealth);
-    }
-
-    
     void RangedAttack(bool isSelected)
     {
         if(isSelected && Input.GetKeyDown(KeyCode.E))
@@ -215,11 +183,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SplashAttack(bool isSelected)
-    {
-        if(isSelected && Input.GetKeyDown(KeyCode.E))
-        {
+    // void SplashAttack(bool isSelected)
+    // {
+    //     if(isSelected && Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         splashAttack.Splash();
+    //     }
+    //     if(isSelected && Input.GetKeyUp(KeyCode.E))
+    //     {
+    //         splashAttack.StopSplash();
+    //     }
+    // }
 
-        }
-    }
+    public void Defeated()
+    {
+        Debug.Log("DED");
+        Destroy(gameObject);
+    }  
 }

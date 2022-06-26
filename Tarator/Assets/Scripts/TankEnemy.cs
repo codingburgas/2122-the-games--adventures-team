@@ -19,8 +19,7 @@ public class TankEnemy : MonoBehaviour
     }
 
     public float health = 200;
-
-
+    public int damage = 3;
     public float speed;
     public float StoppintDistance;
 
@@ -44,9 +43,22 @@ public class TankEnemy : MonoBehaviour
         Health -= damage;
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        { 
+            PlayerController player = other.GetComponent<PlayerController>();
+
+            if(player != null)
+            {
+                Debug.Log("HIT");
+                player.Health -= damage;
+            }
+        }
+    }
+
     public void Defeated()
     {
         Debug.Log("DED");
-        Destroy(gameObject);
     }
 }

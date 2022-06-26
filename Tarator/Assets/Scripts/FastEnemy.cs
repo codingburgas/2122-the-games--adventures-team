@@ -19,7 +19,7 @@ public class FastEnemy : MonoBehaviour
     }
 
     public float health = 100;
-
+    public int damage = 7;
     public float speed;
     public float StoppintDistance;
 
@@ -36,6 +36,21 @@ public class FastEnemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }    
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        { 
+            PlayerController player = other.GetComponent<PlayerController>();
+
+            if(player != null)
+            {
+                Debug.Log("HIT");
+                player.Health -= damage;
+            }
+        }
+        
     }
 
     public void TakeDamage(float damage)
