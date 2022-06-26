@@ -3,6 +3,7 @@ import Stefan from "../img/aboutUsImages/Stefan.jpg";
 import Pamela from "../img/aboutUsImages/Pamela.jpg";
 import Plamen from "../img/aboutUsImages/Plamen.jpg";
 import Elena from "../img/aboutUsImages/Elena.jpg";
+import Emma from "../img/aboutUsImages/Emma.jpg";
 import Antoniya from "../img/aboutUsImages/Antoniya.jpg";
 import Ivan from "../img/aboutUsImages/IvanStoychev.jpg";
 
@@ -38,7 +39,7 @@ let cardData = [
     github: "https://github.com/ERKeserdzhieva20",
   },
   {
-    img: "#",
+    img: Emma,
     role: "Web Designer",
     id: 5,
     github: "https://github.com/EGGeorgieva21",

@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Components/Card";
 import cardData from "./data/cardData";
 import "./style/style.css";
+import penguin from "./img/penguin.png";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
             })}
           </div>
         </div>
+        <img src={penguin} alt="" className="penguin" />
       </div>
 
       {/* Footer */}

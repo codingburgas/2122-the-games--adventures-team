@@ -4,6 +4,7 @@ export default function Card(props) {
   return (
     <>
       <div className="card--container">
+        <div className="card__darken"></div>
         <img src={props.item.img} alt="" className="card__image" />
         <div className="card__info">
           <a href={props.item.github} target="__blank">
