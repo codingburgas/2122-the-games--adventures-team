@@ -28,6 +28,6 @@ public class WinMenu : MonoBehaviour
     public void ExitToMenu()
     {
         Time.timeScale = 0f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("StartMenu");
     }
 }
