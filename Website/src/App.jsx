@@ -3,7 +3,6 @@ import Card from "./Components/Card";
 import cardData from "./data/cardData";
 import "./style/style.css";
 import penguin from "./img/penguin.png";
-import { saveAs } from "file-saver";
 
 function App() {
   const saveFile = () => {
@@ -120,12 +119,8 @@ function App() {
 
       {/* pictures */}
       <div className="image--container">
-        <div className="upper">
-          <div className="image image1 image__from__left slider__in"></div>
-        </div>
-        <div className="lower">
-          <div className="image image2 image__from__right slider__in"></div>
-        </div>
+        <div className="image image1 image__from__left slider__in"></div>
+        <div className="image image2 image__from__right slider__in"></div>
       </div>
 
       {/* developers */}

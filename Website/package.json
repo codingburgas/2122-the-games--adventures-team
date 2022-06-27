@@ -1,7 +1,8 @@
 {
   "name": "site",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://sturdy-spork-7f04b9db.pages.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
