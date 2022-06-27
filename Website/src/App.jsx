@@ -3,17 +3,20 @@ import Card from "./Components/Card";
 import cardData from "./data/cardData";
 import "./style/style.css";
 import penguin from "./img/penguin.png";
-import { saveAs } from "file-saver";
 
 function App() {
   const saveFile = () => {
     window.location.href =
+<<<<<<< Updated upstream
       "https://github.com/codingburgas/2122-the-games--adventures-team/releases/download/1.0.0/Tarator.7z";
   };
 
   const mobileButtonFunc = () => {
     window.location.href =
       "https://github.com/codingburgas/2122-the-games--adventures-team";
+=======
+      "https://github.com/codingburgas/2122-the-games--adventures-team/releases/tag/1.0.0";
+>>>>>>> Stashed changes
   };
 
   //get the download button
@@ -120,12 +123,8 @@ function App() {
 
       {/* pictures */}
       <div className="image--container">
-        <div className="upper">
-          <div className="image image1 image__from__left slider__in"></div>
-        </div>
-        <div className="lower">
-          <div className="image image2 image__from__right slider__in"></div>
-        </div>
+        <div className="image image1 image__from__left slider__in"></div>
+        <div className="image image2 image__from__right slider__in"></div>
       </div>
 
       {/* developers */}
