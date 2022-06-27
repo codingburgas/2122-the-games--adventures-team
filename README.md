@@ -48,7 +48,7 @@ https://github.com/codingburgas/2122-the-games--adventures-team
 #### Download from our website<a name="download"></a>
 You can access our website either by pasting this link into your browser:
 ```
-https://62b97600ddd9ef7d5a715781--tarator.netlify.app
+tarator.netlify.app
 ```
 
 <hr>
