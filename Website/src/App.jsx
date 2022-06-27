@@ -7,7 +7,8 @@ import { saveAs } from "file-saver";
 
 function App() {
   const saveFile = () => {
-    saveAs("README.md", "README.md");
+    window.location.href =
+      "https://github.com/codingburgas/2122-the-games--adventures-team/releases/download/1.0.0/Tarator.7z";
   };
 
   //get the download button
