@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+<p align="center">
+  <img height="500" width="500" src="Tarator/Assets/Logo/taratorLogoBlackText.png#gh-light-mode-only" alt="Logo"/>
+  <img height="500" width="500" src="Tarator/Assets/Logo/taratorLogoWhiteText.png#gh-dark-mode-only" alt="Logo"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr>
 
-## Available Scripts
+## 📋 Table of Contents
+- [Description](#description)
+- [Getting started](#gettingStarted)
+  - [Compile from source](#compile)
+  - [Download from our website](#download)  
+- [Built Using](#builtUsing)
+  - [Game](#game)
+  - [Website](#website)
+  - [Design](#design)
+  - [Documentation](#doc)
+- [Authors](#authors)
 
-In the project directory, you can run:
+<hr>
 
-### `npm start`
+## 🔎 Description <a name="description"></a>
+A ghosthunter dungeon crawler game, in which you and your cat companion go around killing ghosts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<hr>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting started<a name="gettingStarted"></a>
+*These instructions will get you a copy of the project up and running on your local machine.*
 
-### `npm test`
+#### Compile from source <a name="compile"></a>
+- Prerequisites
+```
+Code Editor(e.g. Visual Studio with Unity Development installed)
+Unity
+Git
+```
+- Installing
+1. Clone the repo
+```
+https://github.com/codingburgas/2122-the-games--adventures-team
+```
+2. Open the project in UnityHub
+3. Run the project!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Download from our website<a name="download"></a>
+You can access our website either by pasting this link into your browser:
+```
+https://sturdy-spork-7f04b9db.pages.github.io
+```
 
-### `npm run build`
+<hr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖥️ Built Using <a name="builtUsing"></a>
+*Everything we used for creating this project. You can find the links to download the programs and information about the languages used, as well as the game engine.*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Game <a name="game"></a>
+- [Unity](https://unity.com) - Game Engine
+  - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) - language used to create the applicatiom
+  - [Visual Studio Code](https://code.visualstudio.com) - Source Code Editor
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Website <a name="website"></a>
+- [JavaScript](https://www.javascript.com) - Web Development language
+  - [React](https://bg.reactjs.org) - JavaScript framework
+- [HTML](https://www.w3schools.com/html/) - Hyper Text Markup Language
+- [CSS](https://www.w3schools.com/css/) - Cascading Style Sheets
 
-### `npm run eject`
+### Design <a name="design"></a>
+- [Figma](https://www.figma.com/downloads/) - UI
+- [Krita](https://krita.org/en/) - Poster, Banner
+- [Aseprite](https://www.aseprite.org) - Pixel art, sprites
+- [JustInMind](https://www.justinmind.com) - UX
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Documentation <a name="doc"></a>
+- [Wiki](https://github.com/codingburgas/2122-the-games--adventures-team/wiki) - Everything you need to know about our project
+- [PowerPoint](https://codingburgas-my.sharepoint.com/personal/ppdimitrakova20_codingburgas_bg/_layouts/15/doc.aspx?sourcedoc={1854b2b3-9e2a-4333-990b-c2e96229a8df}&action=edit)- Presentation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📖 Authors <a name="authors"></a>
+*Everyone who has participated in making this project:*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Stefan Ravinov](https://github.com/SORavninov19) - Scrum Trainer
+- [Presian Stefanov](https://github.com/PSStefanov19) - Play Tester
+- [Pamela Dimitrakova](https://github.com/PPDimitrakova20) - Backend Developer
+- [Plamen Daylyanov](https://github.com/PRDaylyanov20) - Backend Developer
+- [Elena Keserdzhieva](https://github.com/ERKeserdzhieva20) - Frontend Developer
+- [Ivan Stoychev](https://github.com/IYStoychev21) - Web Developer
+- [Antonia Taneva](https://github.com/ATTaneva21) - Game Designer
+- [Emma Georgieva](https://github.com/EGGeorgieva21) - General Designer
