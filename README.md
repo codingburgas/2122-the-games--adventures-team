@@ -8,7 +8,8 @@
 ## 📋 Table of Contents
 - [Description](#description)
 - [Getting started](#gettingStarted)
-  - [Compile from source](#compile)  
+  - [Compile from source](#compile)
+  - [Download from our website](#download)  
 - [Built Using](#builtUsing)
   - [Game](#game)
   - [Website](#website)
@@ -16,8 +17,12 @@
   - [Documentation](#doc)
 - [Authors](#authors)
 
+<hr>
+
 ## 🔎 Description <a name="description"></a>
 A ghosthunter dungeon crawler game, in which you and your cat companion go around killing ghosts.
+
+<hr>
 
 ## 🚀 Getting started<a name="gettingStarted"></a>
 *These instructions will get you a copy of the project up and running on your local machine.*
@@ -25,16 +30,25 @@ A ghosthunter dungeon crawler game, in which you and your cat companion go aroun
 #### Compile from source <a name="compile"></a>
 - Prerequisites
 ```
-Visual Studio with C++ development installed.
+Code Editor(e.g. Visual Studio with Unity Development installed)
+Unity
 Git
 ```
 - Installing
 1. Clone the repo
 ```
-https://github.com/PPDimitrakova20/Indigo.git
+https://github.com/codingburgas/2122-the-games--adventures-team
 ```
-2. Open the .sln file
+2. Open the project in UnityHub
 3. Run the project!
+
+#### Download from our website<a name="download"></a>
+You can access our website either by pasting this link into your browser:
+```
+https://sturdy-spork-7f04b9db.pages.github.io
+```
+
+<hr>
 
 ## 🖥️ Built Using <a name="builtUsing"></a>
 *Everything we used for creating this project. You can find the links to download the programs and information about the languages used, as well as the game engine.*
