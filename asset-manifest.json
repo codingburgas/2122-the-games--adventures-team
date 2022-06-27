@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6c959e91.css",
-    "main.js": "/static/js/main.6662d02d.js",
+    "main.js": "/static/js/main.d8155302.js",
     "static/media/mainMenu.png": "/static/media/mainMenu.6a301ec7e94717e090cd.png",
     "static/media/longerPosterWithoutText.jpg": "/static/media/longerPosterWithoutText.703fef1984f0794c64df.jpg",
     "static/media/tayAndPenguinBanner.png": "/static/media/tayAndPenguinBanner.f0f0fb0ce32405567ef6.png",
@@ -22,10 +22,10 @@
     "static/media/madeWithUnity.png": "/static/media/madeWithUnity.ff7ee431a2b159d82e8f.png",
     "index.html": "/index.html",
     "main.6c959e91.css.map": "/static/css/main.6c959e91.css.map",
-    "main.6662d02d.js.map": "/static/js/main.6662d02d.js.map"
+    "main.d8155302.js.map": "/static/js/main.d8155302.js.map"
   },
   "entrypoints": [
     "static/css/main.6c959e91.css",
-    "static/js/main.6662d02d.js"
+    "static/js/main.d8155302.js"
   ]
 }
