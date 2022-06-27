@@ -35,7 +35,12 @@ public class FastEnemy : MonoBehaviour
         if(Vector2.Distance(transform.position, target.position) > StoppintDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }    
+        }
+
+        if (Health <= 0)
+        {
+            Defeated();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -60,7 +65,6 @@ public class FastEnemy : MonoBehaviour
 
     public void Defeated()
     {
-        Debug.Log("DED");
         Destroy(gameObject);
     }
 }

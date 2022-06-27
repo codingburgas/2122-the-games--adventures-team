@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathMenu : MonoBehaviour
+public class WinMenu : MonoBehaviour
 {
-    public GameObject deathMenuUI;
+    public GameObject WinMenuUI;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,12 @@ public class DeathMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        deathMenuUI.SetActive(true);
+        WinMenuUI.SetActive(true);
     }
 
     public void Restart()
     {
-        deathMenuUI.SetActive(false);
+        WinMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }
 

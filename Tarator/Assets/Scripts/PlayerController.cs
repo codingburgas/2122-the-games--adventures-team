@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,13 +13,16 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
 
     private Inventory inventory;
-
     public UI_inventory uiInvetory;
+
+    public DeathMenu deathMenu;
 
     // Variables for health
     public int maxHealth = 100;
-    public int Health {
-        set {
+    public int Health 
+    {
+        set
+        {
             health = value;
 
             if(health <= 0)
@@ -26,12 +30,13 @@ public class PlayerController : MonoBehaviour
                 Defeated();
             }
         }
-        get {
+        get 
+        {
             return health;
         }
     }
 
-    public int health = 50;
+    public int health = 100;
 
     public HealthBar healthBar;
 
@@ -197,7 +202,6 @@ public class PlayerController : MonoBehaviour
 
     public void Defeated()
     {
-        Debug.Log("DED");
-        Destroy(gameObject);
+        SceneManager.LoadScene("DeathMenu");
     }  
 }

@@ -63,7 +63,12 @@ public class ShooterEnemy : MonoBehaviour
         {
             timeBetweenShots -= Time.deltaTime;
         }
-    }
+
+        if(Health <= 0)
+        {
+            Defeated();
+        }
+}
 
     public void TakeDamage(float damage)
     {
@@ -72,7 +77,6 @@ public class ShooterEnemy : MonoBehaviour
 
     public void Defeated()
     {
-        Debug.Log("DED");
         Destroy(gameObject);
     }
 }

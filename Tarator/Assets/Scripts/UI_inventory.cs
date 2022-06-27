@@ -8,7 +8,7 @@ public class UI_inventory : MonoBehaviour
     private Transform MeleeSlot;
     private Transform RangedSlot;
     private Transform SpecialSlot;
-    
+
     public GameObject MeleeWeapon;
     public GameObject SpecialWeapon;
     public GameObject RangedWeapon;
@@ -20,7 +20,8 @@ public class UI_inventory : MonoBehaviour
 
         //SpecialWeapon = GameObject.Find("UI_Vacuum");
         SpecialWeapon.SetActive(false);
-          
+
+
         //RangedWeapon = GameObject.Find("UI_Bow");
         RangedWeapon.SetActive(false);
     }
@@ -29,16 +30,21 @@ public class UI_inventory : MonoBehaviour
         this.inventory = inventory;
         RefreshInventoryItems();
     }
-    
-    private void RefreshInventoryItems(){
-        foreach(Items item in inventory.itemList){
-            if(item.itemType == Items.ItemType.MeleeWeapon){
-               MeleeWeapon.SetActive(true);
+
+    private void RefreshInventoryItems()
+    {
+        foreach (Items item in inventory.itemList)
+        {
+            if (item.itemType == Items.ItemType.MeleeWeapon)
+            {
+                MeleeWeapon.SetActive(true);
             }
-            if(item.itemType == Items.ItemType.SpecialWeapon){
+            if (item.itemType == Items.ItemType.SpecialWeapon)
+            {
                 SpecialWeapon.SetActive(true);
             }
-            if(item.itemType == Items.ItemType.RangedWeapon){
+            if (item.itemType == Items.ItemType.RangedWeapon)
+            {
                 RangedWeapon.SetActive(true);
             }
         }
