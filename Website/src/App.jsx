@@ -11,6 +11,11 @@ function App() {
       "https://github.com/codingburgas/2122-the-games--adventures-team/releases/download/1.0.0/Tarator.7z";
   };
 
+  const mobileButtonFunc = () => {
+    window.location.href =
+      "https://github.com/codingburgas/2122-the-games--adventures-team";
+  };
+
   //get the download button
   const mobileButton = React.useRef(null);
   const pcButton = React.useRef(null);
@@ -85,6 +90,7 @@ function App() {
         <button
           className="download__button__mobile download__button"
           ref={mobileButton}
+          onClick={mobileButtonFunc}
         >
           PLAY ON PC
         </button>
@@ -114,8 +120,12 @@ function App() {
 
       {/* pictures */}
       <div className="image--container">
-        <div className="image image1 image__from__left slider__in"></div>
-        <div className="image image2 image__from__right slider__in"></div>
+        <div className="upper">
+          <div className="image image1 image__from__left slider__in"></div>
+        </div>
+        <div className="lower">
+          <div className="image image2 image__from__right slider__in"></div>
+        </div>
       </div>
 
       {/* developers */}

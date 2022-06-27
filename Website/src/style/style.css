@@ -145,8 +145,38 @@ body {
   margin: var(--spacer);
 }
 
+.upper,
+.lower {
+  width: fit-content;
+}
+
+.upper:hover > .image1 {
+  transform: scale(1.05);
+  box-shadow: 0 0 100px 0 #000000;
+  /* cursor: pointer; */
+}
+
+.lower:hover > .image2 {
+  transform: scale(1.05);
+  box-shadow: 0 0 100px 0 #000000;
+  /* cursor: pointer; */
+}
+
+/* .upper:active > .image1 {
+  transform: scale(0.97);
+}
+
+.lower:active > .image2 {
+  transform: scale(0.97);
+} */
+
 .image--container {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 130vh;
 }
 
 /* devs */
