@@ -7,7 +7,7 @@ import { saveAs } from "file-saver";
 
 function App() {
   const saveFile = () => {
-    saveAs("./tarator.exe", "Tarator.md");
+    saveAs("Tarator.7z", "Tarator.7z");
   };
 
   //get the download button
