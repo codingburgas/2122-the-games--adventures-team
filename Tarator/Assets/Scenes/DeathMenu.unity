@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 175424021}
   - component: {fileID: 175424020}
   m_Layer: 5
-  m_Name: PlayButton
+  m_Name: RetryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -347, y: 20}
+  m_AnchoredPosition: {x: -423, y: -151}
   m_SizeDelta: {x: 570.1005, y: 256.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &175424020
@@ -191,8 +191,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 4586451b5f0f625448fd89ae8aeaaa17, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: e907ac585a863304286e1867c3478cb9, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: f9dfd7685dfbc7444964c0d75246394f, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 7112ed889c20894408115350734060f6, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c0971b0d0d07cc4a9927b985b243ad7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7112ed889c20894408115350734060f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -491,8 +491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 20}
-  m_SizeDelta: {x: 551.971, y: 191.1}
+  m_AnchoredPosition: {x: 335, y: -153}
+  m_SizeDelta: {x: 570.1005, y: 216.4621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &897719434
 MonoBehaviour:
@@ -523,8 +523,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7c2dd66765a6cec4b8577ada2b836744, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: fa1af6c7661ea5444a92eacbf125819d, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: d55da4c796e8d294b9f44860cac27f75, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 3d417f6d9d0d39445bc3416b48bb0ff5, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14a16fa7161e454499cf9c436fe36d31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d417f6d9d0d39445bc3416b48bb0ff5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -699,8 +699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 55.936, y: 13.781}
-  m_SizeDelta: {x: 1891.873, y: 983.563}
+  m_AnchoredPosition: {x: 50, y: 50.000015}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588982069
 MonoBehaviour:
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a62fdcde97aec474991744ad2b792463, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aaf2328dbfd9bdb4cb1d18f7a6be7ee1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
