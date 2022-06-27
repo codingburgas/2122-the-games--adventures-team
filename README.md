@@ -27,6 +27,9 @@ A ghosthunter dungeon crawler game, in which you and your cat companion go aroun
 ## 🚀 Getting started<a name="gettingStarted"></a>
 *These instructions will get you a copy of the project up and running on your local machine.*
 
+#### Get a release
+Download the latest release from the releases page.
+
 #### Compile from source <a name="compile"></a>
 - Prerequisites
 ```
@@ -45,7 +48,7 @@ https://github.com/codingburgas/2122-the-games--adventures-team
 #### Download from our website<a name="download"></a>
 You can access our website either by pasting this link into your browser:
 ```
-https://sturdy-spork-7f04b9db.pages.github.io
+https://62b97600ddd9ef7d5a715781--tarator.netlify.app
 ```
 
 <hr>
