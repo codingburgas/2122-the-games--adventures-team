@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9023491457585876826}
   - component: {fileID: 9023491457585876824}
   - component: {fileID: 9023491457585876827}
+  - component: {fileID: 2406465457590281529}
   m_Layer: 0
   m_Name: ShooterEnemy
   m_TagString: ShooterGhost
@@ -152,3 +153,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65772533, y: 0.7969192}
   m_EdgeRadius: 0
+--- !u!95 &2406465457590281529
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023491457585876831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90e7cec29ac00cf4aa6b37b570b9bf51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

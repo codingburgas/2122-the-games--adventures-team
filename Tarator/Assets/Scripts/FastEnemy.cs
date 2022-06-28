@@ -10,6 +10,7 @@ public class FastEnemy : MonoBehaviour
 
             if(health <= 0)
             {
+                //anim.Play("idle");
                 Defeated();
             }
         }

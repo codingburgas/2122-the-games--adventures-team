@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private Inventory inventory;
     public UI_inventory uiInvetory;
 
-    public DeathMenu deathMenu;
+    Animator ani;
 
     // Variables for health
     public int maxHealth = 100;
@@ -71,6 +71,8 @@ public class PlayerController : MonoBehaviour
         // Set currentHealth to maxHealth
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        ani = GetComponent<Animator>();
     }
 
 
@@ -124,11 +126,29 @@ public class PlayerController : MonoBehaviour
         }
         if(movementInput.x < 0)
         {
-            spriteRenderer.flipX = true;
+           spriteRenderer.flipX = true;
+           ani.SetBool("SideMovement", true);
+           ani.SetBool("UpMovement", false);
+           ani.SetBool("DownMovement", false);
         }
         else if(movementInput.x > 0)
         {
             spriteRenderer.flipX = false;
+            ani.SetBool("SideMovement", true);
+            ani.SetBool("UpMovement", false);
+            ani.SetBool("DownMovement", false);
+        }
+        if (movementInput.y < 0)
+        {
+            ani.SetBool("SideMovement", false);
+            ani.SetBool("UpMovement", false);
+            ani.SetBool("DownMovement", true);
+        }
+        else if (movementInput.y > 0)
+        {
+            ani.SetBool("SideMovement", false);
+            ani.SetBool("UpMovement", true);
+            ani.SetBool("DownMovement", false);
         }
     }
 
@@ -165,6 +185,7 @@ public class PlayerController : MonoBehaviour
     {
         if(isSelected && Input.GetKeyDown(KeyCode.E))
         {
+            //animation for attack
             rangeAttack.Shoot();
         }   
     }

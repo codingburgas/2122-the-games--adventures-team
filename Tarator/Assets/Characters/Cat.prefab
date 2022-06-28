@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4745514342526490025}
   - component: {fileID: 4745514342526490024}
   - component: {fileID: 4745514342526490028}
+  - component: {fileID: 6042993431331116997}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -100,3 +101,23 @@ MonoBehaviour:
   speed: 0.75
   StoppintDistance: 0.25
   startTimeBetweenHeal: 0
+--- !u!95 &6042993431331116997
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745514342526490023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dcbf44cbaf1098a459f3758304fe05d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

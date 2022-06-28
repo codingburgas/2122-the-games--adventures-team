@@ -273,7 +273,6 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   uiInvetory: {fileID: 0}
-  deathMenu: {fileID: 0}
   maxHealth: 100
   health: 50
   healthBar: {fileID: 0}
@@ -339,7 +338,7 @@ Animator:
   m_GameObject: {fileID: 8166738975093728755}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5705f5e9f42f1524f91f2c3207676f4b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2ce950a01c8de9a42aafd723d72ef309, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

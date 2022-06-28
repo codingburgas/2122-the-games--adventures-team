@@ -10,6 +10,7 @@ public class ShooterEnemy : MonoBehaviour
 
             if(health <= 0)
             {
+                //ani.Play("Shooter");
                 Defeated();
             }
         }
