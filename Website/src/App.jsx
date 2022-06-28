@@ -7,7 +7,7 @@ import penguin from "./img/penguin.png";
 function App() {
   const saveFile = () => {
     window.location.href =
-      "https://github.com/codingburgas/2122-the-games--adventures-team/releases/download/1.0.0/Tarator.7z";
+      "https://github.com/codingburgas/2122-the-games--adventures-team/releases/download/1.0.1/Tarator.7z";
   };
 
   const mobileButtonFunc = () => {
