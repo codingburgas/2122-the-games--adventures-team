@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: 49.99999}
+  m_AnchoredPosition: {x: 50, y: -1}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382743547
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a0bc5e60c7ca1d4093e31eeff8c8f8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86c3bd1c4aa319d4ba86075ab9425db6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: -326}
+  m_AnchoredPosition: {x: 356, y: -305}
   m_SizeDelta: {x: 551.9714, y: 164.1931}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661170284
@@ -267,9 +267,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7c2dd66765a6cec4b8577ada2b836744, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: fa1af6c7661ea5444a92eacbf125819d, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 32d4772677844bd49840c95a5955caab, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: f7898e00cfa36fe4a96f4a4a66542bf7, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: dc92ab2dfe6a18143af10ac9a0708ff8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -314,9 +314,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: acfb871596c619b418f34309f8b5a624, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7898e00cfa36fe4a96f4a4a66542bf7, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -733,8 +733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -399, y: -326}
-  m_SizeDelta: {x: 570.1005, y: 256.17}
+  m_AnchoredPosition: {x: -408, y: -309}
+  m_SizeDelta: {x: 365.085, y: 157.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683157100
 MonoBehaviour:
@@ -765,9 +765,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 4586451b5f0f625448fd89ae8aeaaa17, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: e907ac585a863304286e1867c3478cb9, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: e907ac585a863304286e1867c3478cb9, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 9fb2594f4c128ee49a83bac212ab0469, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 4586451b5f0f625448fd89ae8aeaaa17, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -814,7 +814,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 9fb2594f4c128ee49a83bac212ab0469, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -869,7 +869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 691, y: 338}
+  m_AnchoredPosition: {x: 691, y: 245}
   m_SizeDelta: {x: 114.4431, y: 107.0234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1715148949

@@ -12,11 +12,16 @@ public class CatFollow : MonoBehaviour
     private float timeBetweenHeal;
     public float startTimeBetweenHeal;
 
+    Animator ani;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
+        ani = GetComponent<Animator>();
 
+        ani.SetBool("IsSideways", false);
+        ani.SetBool("IsUpDown", false);
     }
 
     void Update()
@@ -29,10 +34,19 @@ public class CatFollow : MonoBehaviour
         if (target.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            ani.SetBool("IsSideways", true);
+            ani.SetBool("IsUpDown", false);
         }
         else if (target.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+            ani.SetBool("IsSideways", true);
+            ani.SetBool("IsUpDown", false);
+        }
+        else
+        {
+            ani.SetBool("IsSideways", false);
+            ani.SetBool("IsUpDown", true);
         }
     }
 
